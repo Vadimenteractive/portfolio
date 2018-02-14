@@ -13,27 +13,27 @@
 </head>
 <body>
 <header>
+
     <section id="navigate">
         <h5>Сандель</h5>
-
         <ul>
             <li>
-                <a href="javascript:void(0);">Хим.анализ</a>
+                <a class="navi-item" href="javascript:void(0);">Хим.анализ</a>
             </li>
             <li>
-                <a href="javascript:void(0);">Каталог фильтров</a>
+                <a class="navi-item" href="javascript:void(0);">Каталог фильтров</a>
             </li>
             <li>
-                <a href="javascript:void(0);">Помощь в подборе</a>
+                <a class="navi-item" href="javascript:void(0);">Помощь в подборе</a>
             </li>
             <li>
-                <a href="javascript:void(0);">Преимущества</a>
+                <a class="navi-item" href="javascript:void(0);">Преимущества</a>
             </li>
             <li>
-                <a href="javascript:void(0);">Видеоотзывы</a>
+                <a class="navi-item" href="javascript:void(0);">Видеоотзывы</a>
             </li>
             <li>
-                <a href="javascript:void(0);">Как нас найти</a>
+                <a class="navi-item" href="javascript:void(0);">Как нас найти</a>
             </li>
         </ul>
         <div class="hamburger">
@@ -60,10 +60,41 @@
                     <h2>ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ</h2>
                     <p>Об основных загрязнителях воды от испытательного центра</p>
                     <form action="" method="post" id="call" >
-                        <input type="text" class="phone" placeholder="Введите телефон">
-                        <input type="submit" class="submit-phone" placeholder="ПОЛУЧИТЬ КОНСУЛТАЦИЮ">
+                        <input type="text" class="phone" placeholder="Введите телефон*">
+                        <input type="submit" class="submit-phone" value="ПОЛУЧИТЬ КОНСУЛТАЦИЮ">
                     </form>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="catalog">
+        <div class="content-box">
+            <div class="text-box">
+                <h3>КАТАЛОГ</h3>
+                <p>Выберите виджет из списка, или закажите свой собственный</p>
+            </div>
+            <div class="items-box">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="..." alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="..." alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="..." alt="Third slide">
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </section>

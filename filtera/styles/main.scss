@@ -8,6 +8,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Geometria';
   src: url('../fonts/geometria/Geometria-Bold.eot');
@@ -29,6 +30,7 @@
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Geometria';
   src: url('../fonts/geometria/Geometria-Light.eot');
@@ -40,17 +42,18 @@
   font-style: normal;
 }
 
-
 @mixin background() {
   background: linear-gradient(to right, #37a8ff, #4747ff);
 }
+
 html {
-  margin:0;
+  margin: 0;
   padding: 0;
   font-size: 16px;
 }
+
 body {
-  margin:0;
+  margin: 0;
   padding: 0;
   font-size: 16px;
   #navigate {
@@ -72,7 +75,7 @@ body {
         display: inline-block;
         position: relative;
         transition: all .2s ease;
-        &[data-class="open-li"]{
+        &[data-class="open-li"] {
           right: 0;
           transition: all .2s ease;
         }
@@ -107,7 +110,7 @@ body {
         //float: right;
         clear: both;
         display: none;
-        width:250px;
+        width: 250px;
         position: absolute;
         top: 100px;
         right: 0;
@@ -223,10 +226,13 @@ body {
     background-size: cover;
     display: flex;
     .content-box {
-      max-width: 1170px;
+      width: 1170px;
       margin: auto;
       background: url("../img/Layer-1.png") no-repeat left center;
+      min-height: 610px;
       .content-inner {
+        float: right;
+        max-width: 572px;
         h2 {
           font: bold 1.56rem 'Geometria', sans-serif;
           text-align: left;
@@ -241,6 +247,7 @@ body {
           h2 {
             font: 800 1.56rem 'Geometria', sans-serif;
             margin-bottom: 30px;
+            text-align: center;
           }
           p {
             font: normal 1rem 'Geometria', sans-serif;
@@ -248,9 +255,12 @@ body {
           }
           #call {
             .phone, .submit-phone {
+              margin: 0 auto;
               width: 390px;
               height: 74px;
               border-radius: 37px;
+              //line-height: 74px;
+              padding: 0 37px;
               display: block;
               box-sizing: border-box;
             }
@@ -259,44 +269,35 @@ body {
               margin-bottom: 26px;
               &::-webkit-input-placeholder {
                 font: normal 1.2rem 'Geometria', sans-serif;
-              line-height: 74px;
-                color: #919191;}
-              &::-moz-placeholder          {
+                line-height: 74px;
+                color: #919191;
+              }
+              &::-moz-placeholder {
                 font: normal 1.2rem 'Geometria', sans-serif;
-              line-height: 74px;
-                color: #919191;}/* Firefox 19+ */
-              &:-moz-placeholder           {
+                line-height: 74px;
+                color: #919191;
+              }
+              /* Firefox 19+ */
+              &:-moz-placeholder {
                 font: normal 1.2rem 'Geometria', sans-serif;
-              line-height: 74px;
-                color: #919191;}/* Firefox 18- */
-              &:-ms-input-placeholder      {
+                line-height: 74px;
+                color: #919191;
+              }
+              /* Firefox 18- */
+              &:-ms-input-placeholder {
                 font: normal 1.2rem 'Geometria', sans-serif;
-              line-height: 74px;
-                color: #919191;}
-            }
+                line-height: 74px;
+                color: #919191;
+              }
             }
             .submit-phone {
               background: #fb2468;
-              &::-webkit-input-placeholder {
-                font: bold 1.1rem 'Geometria', sans-serif;
-              line-height: 74px;
-              color: white;}
-              &::-moz-placeholder          {
-                font: bold 1.1rem 'Geometria', sans-serif;
-              line-height: 74px;
-              color: white;}/* Firefox 19+ */
-              &:-moz-placeholder           {
-                font: bold 1.1rem 'Geometria', sans-serif;
-              line-height: 74px;
-              color: white;}/* Firefox 18- */
-              &:-ms-input-placeholder      {
-                font: bold 1.1rem 'Geometria', sans-serif;
-              line-height: 74px;
-              color: white;}
+              font: bold 1.1rem 'Geometria', sans-serif;
+              letter-spacing: 2px;
+              color: white;
             }
           }
         }
-
       }
     }
   }

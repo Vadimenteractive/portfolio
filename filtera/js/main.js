@@ -1,8 +1,7 @@
 ;(function($){
     $(function () {
-
-        $('.hamburger').on('click', function () {
-            var $this = $(this);
+        function naviBar() {
+            var $this = $('.hamburger');
             $ulWidth = $this
                 .closest('#navigate')
                 .children('ul')
@@ -71,6 +70,13 @@
             } else {i = $liLength;
                 animOut();
             }
+        }
+
+        $('.hamburger').on('click', function () {
+            naviBar()
+        });
+        $('.navi-item').on('click', function () {
+            naviBar()
         })
     })
 })(jQuery);

@@ -219,5 +219,35 @@ body {
   }
   #analyse {
     min-height: 800px;
+    background: url("../img/bg2.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    .content-box {
+      max-width: 1170px;
+      margin: auto;
+      background: url("../img/Layer-1.png") no-repeat left center;
+      .content-inner {
+        h2 {
+          font: bold 1.56rem 'Geometria', sans-serif;
+          text-align: left;
+          margin-bottom: 46px;
+        }
+        .submit-card {
+          background: white;
+          border-radius: 30px;
+          padding: 70px;
+          text-align: center;
+          h2 {
+            font: 800 1.56rem 'Geometria', sans-serif;
+            margin-bottom: 30px;
+          }
+          p {
+            font: normal 1rem 'Geometria', sans-serif;
+            margin-bottom: 60px;
+          }
+        }
+
+      }
+    }
   }
 }

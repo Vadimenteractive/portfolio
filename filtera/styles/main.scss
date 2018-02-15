@@ -255,12 +255,12 @@ body {
           }
           #call {
             .phone, .submit-phone {
+              outline: none;
               border: none;
               margin: 0 auto;
               width: 390px;
               height: 74px;
               border-radius: 37px;
-              //line-height: 74px;
               padding: 0 37px;
               display: block;
               box-sizing: border-box;
@@ -292,6 +292,7 @@ body {
               }
             }
             .submit-phone {
+              cursor: pointer;
               background: #fb2468;
               font: bold 1.1rem 'Geometria', sans-serif;
               letter-spacing: 2px;
@@ -306,8 +307,8 @@ body {
     background: url("../img/bg3.jpg") no-repeat;
     background-size: cover;
     .content-box {
-      padding-top: 150px;
-      padding-bottom: 150px;
+      padding-top: 100px;
+      padding-bottom: 100px;
       .text-box {
         margin-bottom: 30px;
         h3 {
@@ -321,6 +322,7 @@ body {
           font: 300 1rem 'Geometria', sans-serif;
         }
       }
+//карусель - поинтс
       #carouselExampleIndicators{
         .carousel-indicators {
           bottom: -75px;
@@ -332,16 +334,19 @@ body {
             display: block;
             box-sizing: border-box;
             margin: 4px 15px;
+            transition: all .8s ease;
             &.active {
               width: 24px;
               height: 24px;
               background: #2b9fff;
               border-radius: 12px;
               margin: 0 11px;
+              transition: all .8s ease;
             }
           }
         }
       }
+
       .items-box {
         .col-xl-3 {
           padding: 1rem;
@@ -377,11 +382,168 @@ body {
             cursor: pointer;
             color: white;
             text-align: center;
-
           }
         }
       }
     }
+  }
+  #callback {
+    background: url("../img/bg4-2.jpg") no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+    .content-box {
+      .text-box {
+        h2 {
+          font: bold 2.2rem 'Geometria', sans-serif;
+          color: white;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        p {
+          font: normal 1.22rem 'Geometria', sans-serif;
+          color: white;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        #call_2 {
+          margin: 0 auto;
+          box-sizing: border-box;
+          background: #ffffff;
+          height: 68px;
+          border: solid 4px #ffffff;
+          border-radius: 34px;
+          width: 50%;
+          transition: all .4s ease;
+          .phone, .submit-phone {
+            //width: calc(50% - 4px);
+            outline: none;
+            border: none;
+            margin: 0 auto;
+            height: 60px;
+          }
+//раздвигающаяся менюшка
+          .phone {
+            background: transparent;
+            width: 0;
+            padding-left: 0px;
+            border-radius: 30px;
+            transition: all .4s ease;
+            &::-webkit-input-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 60px;
+              color: #919191;
+            }
+            &::-moz-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 60px;
+              color: #919191;
+            }
+            /* Firefox 19+ */
+            &:-moz-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 60px;
+              color: #919191;
+            }
+            /* Firefox 18- */
+            &:-ms-input-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 60px;
+              color: #919191;
+            }
+          }
+          .submit-phone {
+            width: calc(100% - 8px);
+            border-radius: 30px;
+            cursor: pointer;
+            background: #fb2468;
+            font: bold 1.1rem 'Geometria', sans-serif;
+            letter-spacing: 2px;
+            color: white;
+            padding: 0 30px;
+            transition: all .4s ease;
+          }
+//???????????
+          &:hover {
+            width: 100%;
+            transition: all .4s ease;
+            & > .phone {
+              width: calc(50% - 4px);
+              padding-left: 30px;
+              transition: all .4s ease;
+            }
+            & > .submit-phone {
+              width: calc(50% - 4px);
+              transition: all .4s ease;
+            }
+          }
+          &:active {
+            width: 100%;
+            & > .phone {
+              width: calc(50% - 4px);
+              padding-left: 30px;
+            }
+            & > .submit-phone {
+              width: calc(50% - 4px);
+            }
+          }
 
+        }
+      }
+    }
+  }
+  #advantage {
+    background: url("../img/bg5.jpg") no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+    .text-box {
+      margin-bottom: 100px;
+      h2 {
+        font: bold 2.2rem 'Geometria', sans-serif;
+        color: #2e77cc;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      p {
+        font: normal 1.22rem 'Geometria', sans-serif;
+        text-align: center;
+      }
+    }
+    .advantage-container {
+      .item-block {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 2rem;
+        .round {
+          width: 150px;
+          height: 150px;
+          border-radius: 75px;
+          margin: 0 auto 55px;
+          @include background();
+          display: flex;
+          box-shadow: 0 3px 15px 0 #2e77cc;
+          transition: all .4s ease;
+          &:hover {
+            transform: translate(-7px, -9px);
+            //transform: rotate(10deg);
+            box-shadow: 0 12px 15px 0 #2e77cc;
+            transition: all .4s ease;
+          }
+          img {
+            margin: auto;
+          }
+        }
+        h5 {
+          font: bold 1.12rem 'Geometria', sans-serif;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        p {
+          font: 300 1rem 'Geometria', sans-serif;
+          text-align: center;
+        }
+
+
+      }
+    }
   }
 }

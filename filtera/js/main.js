@@ -1,5 +1,8 @@
 ;(function($){
     $(function () {
+        $('.carousel').carousel({
+            interval: 999999999
+        });
         function naviBar() {
             var $this = $('.hamburger');
             $ulWidth = $this
@@ -78,5 +81,7 @@
         $('.navi-item').on('click', function () {
             naviBar()
         })
+
+
     })
 })(jQuery);

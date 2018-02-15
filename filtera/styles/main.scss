@@ -255,6 +255,7 @@ body {
           }
           #call {
             .phone, .submit-phone {
+              border: none;
               margin: 0 auto;
               width: 390px;
               height: 74px;
@@ -300,5 +301,87 @@ body {
         }
       }
     }
+  }
+  #catalog {
+    background: url("../img/bg3.jpg") no-repeat;
+    background-size: cover;
+    .content-box {
+      padding-top: 150px;
+      padding-bottom: 150px;
+      .text-box {
+        margin-bottom: 30px;
+        h3 {
+          font: bold 2.1rem 'Geometria', sans-serif;
+          text-align: center;
+          color: #2e77cc;
+          letter-spacing: 7px;
+          margin-bottom: 30px;
+        }
+        p {
+          font: 300 1rem 'Geometria', sans-serif;
+        }
+      }
+      #carouselExampleIndicators{
+        .carousel-indicators {
+          bottom: -75px;
+          li {
+            width: 16px;
+            height: 16px;
+            background: #bfe2ff;
+            border-radius: 8px;
+            display: block;
+            box-sizing: border-box;
+            margin: 4px 15px;
+            &.active {
+              width: 24px;
+              height: 24px;
+              background: #2b9fff;
+              border-radius: 12px;
+              margin: 0 11px;
+            }
+          }
+        }
+      }
+      .items-box {
+        .col-xl-3 {
+          padding: 1rem;
+        }
+        .item-block {
+          box-sizing: border-box;
+          height: 100%;
+          background: white;
+          padding: 2rem;
+          border-radius: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-content: center;
+          box-shadow: 0 5px 15px 0 #2e77cc;
+          h5 {
+            font: bold 1.1rem 'Geometria', sans-serif;
+            text-align: center;
+          }
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+          a {
+            display: block;
+            box-sizing: border-box;
+            padding: 10px 0;
+            height: 44px;
+            border-radius: 22px;
+            @include background();
+            font: normal 1rem 'Geometria', sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+
+          }
+        }
+      }
+    }
+
   }
 }

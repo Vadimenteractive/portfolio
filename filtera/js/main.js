@@ -1,5 +1,10 @@
 ;(function($){
     $(function () {
+        // $(window).on('scroll', function () {
+        //     if ($(window).offset().top >= 100) {
+        //         console.log('scroll');
+        //     }
+        // })
         $('.c-1').carousel({
             interval: 999999999
         });
@@ -87,5 +92,11 @@
 
 
         $('.button1').magnificPopup();
+        $('.phone').on('focus', function () {
+            $('#call_2').addClass('active')
+        })
+        $('.phone').on('blur', function () {
+            $('#call_2').removeClass('active')
+        })
     })
 })(jQuery);

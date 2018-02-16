@@ -1,6 +1,9 @@
 ;(function($){
     $(function () {
-        $('.carousel').carousel({
+        $('.c-1').carousel({
+            interval: 999999999
+        });
+        $('.c-2').carousel({
             interval: 999999999
         });
         function naviBar() {
@@ -83,5 +86,6 @@
         })
 
 
+        $('.button1').magnificPopup();
     })
 })(jQuery);

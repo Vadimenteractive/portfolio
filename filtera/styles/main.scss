@@ -322,35 +322,11 @@ body {
           font: 300 1rem 'Geometria', sans-serif;
         }
       }
-//карусель - поинтс
-      #carouselExampleIndicators{
-        .carousel-indicators {
-          bottom: -75px;
-          li {
-            width: 16px;
-            height: 16px;
-            background: #bfe2ff;
-            border-radius: 8px;
-            display: block;
-            box-sizing: border-box;
-            margin: 4px 15px;
-            transition: all .8s ease;
-            &.active {
-              width: 24px;
-              height: 24px;
-              background: #2b9fff;
-              border-radius: 12px;
-              margin: 0 11px;
-              transition: all .8s ease;
-            }
-          }
-        }
-      }
-
       .items-box {
         .col-xl-3 {
           padding: 1rem;
         }
+
         .item-block {
           box-sizing: border-box;
           height: 100%;
@@ -362,6 +338,11 @@ body {
           justify-content: space-between;
           align-content: center;
           box-shadow: 0 5px 15px 0 #2e77cc;
+          p {
+            font: normal 1.2rem 'Geometria', sans-serif;
+            text-align: center;
+          }
+
           h5 {
             font: bold 1.1rem 'Geometria', sans-serif;
             text-align: center;
@@ -491,6 +472,7 @@ body {
       }
     }
   }
+
   #advantage {
     background: url("../img/bg5.jpg") no-repeat;
     background-size: cover;
@@ -541,9 +523,119 @@ body {
           font: 300 1rem 'Geometria', sans-serif;
           text-align: center;
         }
-
-
       }
     }
+  }
+
+  #video-comment {
+    padding: 120px 0;
+    .text-box {
+      margin-bottom: 100px;
+      h2 {
+        font: bold 2.2rem 'Geometria', sans-serif;
+        color: #2e77cc;
+        text-align: center;
+        margin-bottom: 50px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+      }
+      p {
+        font: normal 1.22rem 'Geometria', sans-serif;
+        text-align: center;
+      }
+    }
+    .video-screen {
+      display: flex;
+      a {
+        margin: auto;
+      }
+    }
+  }
+
+
+  #service {
+    background: url("../img/bg6.jpg") no-repeat;
+    background-size: cover;
+    padding: 120px 0 120px;
+    .text-box {
+      margin-bottom: 100px;
+      h2 {
+        font: bold 2.2rem 'Geometria', sans-serif;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+      }
+    }
+    .item-block {
+      box-sizing: border-box;
+      height: 100%;
+      background: white;
+      padding: 2rem;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      box-shadow: 0 5px 15px 0 #2e77cc;
+      p {
+        font: normal 1.2rem 'Geometria', sans-serif;
+        text-align: center;
+      }
+
+      h5 {
+        font: bold 1.1rem 'Geometria', sans-serif;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      a {
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 0;
+        height: 44px;
+        border-radius: 22px;
+        @include background();
+        font: normal 1rem 'Geometria', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+
+
+
+
+
+  //карусель - поинтс
+  #carouselExampleIndicators, #carouselExampleIndicators-2{
+    .carousel-indicators {
+      bottom: -75px;
+      li {
+        width: 16px;
+        height: 16px;
+        background: #bfe2ff;
+        border-radius: 8px;
+        display: block;
+        box-sizing: border-box;
+        margin: 4px 15px;
+        transition: all .8s ease;
+        &.active {
+          width: 24px;
+          height: 24px;
+          background: #2b9fff;
+          border-radius: 12px;
+          margin: 0 11px;
+          transition: all .8s ease;
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
   }
 }

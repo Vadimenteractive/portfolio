@@ -1,5 +1,0 @@
-[Sat Feb 17 2018 06:58:23 GMT+0200 (Финляндия (зима))] Layer "behance.svg": Duplicate path: behance.svg
-[Sat Feb 17 2018 06:58:23 GMT+0200 (Финляндия (зима))] Layer "google+": Expected end of input but "+" found.
-[Sat Feb 17 2018 06:58:23 GMT+0200 (Финляндия (зима))] Layer "google+": Expected end of input but "+" found.
-[Sat Feb 17 2018 06:58:23 GMT+0200 (Финляндия (зима))] Layer "google+": Expected end of input but "+" found.
-[Sat Feb 17 2018 06:58:23 GMT+0200 (Финляндия (зима))] Layer "+6281235966914": Expected Either a default asset specification or a layer asset specification but "+" found.

@@ -90,7 +90,9 @@
             naviBar()
         })
 
-        $('.map-navi').magnificPopup();
+        $('.map-navi').magnificPopup({
+            //type: 'iframe'
+        });
         $('.button1').magnificPopup();
 
         $('.phone').on('focus', function () {

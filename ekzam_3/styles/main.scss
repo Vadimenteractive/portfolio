@@ -414,8 +414,74 @@ html, body{
         }
       }
     }
+  }
 
-
+  #get-in-touch {
+    position: relative;
+    min-height: 900px;
+    .slide-info {
+      position: absolute;
+      overflow: hidden;
+      box-sizing: border-box;
+      z-index: 3;
+      height: 90px;
+      width: 347px;
+      right: 0;
+      margin-right: -257px;
+      background: rgba(159, 154, 207, 0.3);
+      transition: margin-right 0.4s ease;
+      cursor: pointer;
+      &:hover {
+        margin-right: 0;
+        transition: margin-right 0.4s ease;
+      }
+      & .pic {
+        background: #9f9acf;
+        width: 90px;
+        height: 90px;
+        float: left;
+        display: flex;
+        img {
+          margin: auto;
+        }
+      }
+      & .info {
+        display: flex;
+        height: 100%;
+        & span {
+          margin: auto;
+          font:normal  1.15rem 'PT Sans', sans-serif;
+          text-align: center;
+        }
+      }
+      &.slide-home {
+        top: 220px;
+      }
+      &.slide-phone {
+        top: 310px;
+      }
+    }
+    .home-link {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      background: rgba(159, 154, 207, 0.3);
+      cursor: pointer;
+      z-index: 3;
+      a {
+        margin: auto;
+      }
+    }
+    .front-layer  {
+      position: absolute;
+      background: rgba(159, 154, 207, 0.3);
+      padding: 55px 0;
+      height: 100%;
+      width: 100vw;
+    }
   }
 
 }

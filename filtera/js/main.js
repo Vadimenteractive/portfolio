@@ -90,8 +90,9 @@
             naviBar()
         })
 
-
+        $('.map-navi').magnificPopup();
         $('.button1').magnificPopup();
+
         $('.phone').on('focus', function () {
             $('#call_2').addClass('active')
         })

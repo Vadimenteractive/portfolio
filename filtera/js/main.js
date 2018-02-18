@@ -91,9 +91,11 @@
         })
 
         $('.map-navi').magnificPopup({
-            //type: 'iframe'
+            type: 'iframe'
         });
-        $('.button1').magnificPopup();
+        $('.button1').magnificPopup({
+            type: 'iframe'
+        });
 
         $('.phone').on('focus', function () {
             $('#call_2').addClass('active')

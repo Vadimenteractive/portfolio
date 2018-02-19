@@ -385,6 +385,13 @@ html, body{
         justify-content: space-around;
         align-items: center;
         padding: 0 20px;
+        img {
+          transition: all .4s ease;
+          &:hover {
+            transform: translate(0, -7px);
+            transition: all .4s ease;
+          }
+        }
       }
     }
     .slide-contein {
@@ -501,6 +508,9 @@ html, body{
       padding: 55px 0;
       height: 100%;
       width: 100vw;
+      .name-block {
+        margin-bottom: 270px;
+      }
       #form-get {
         max-width: 865px;
         margin: 0 auto;
@@ -508,6 +518,7 @@ html, body{
         #get-massage {
           width: 100%;
           margin: 0 0 55px;
+          min-width: 200px;
         }
         #get-email, #get-name {
           margin: 0 0 27px;
@@ -550,10 +561,12 @@ html, body{
           }
           &:focus {
             background: white;
-            transition: background 0.4s ease;
+            transition: background 1s ease;
           }
         }
         .submit {
+          box-sizing: border-box;
+          text-transform: uppercase;
           display: block;
           height: 70px;
           width: 293px;
@@ -564,6 +577,10 @@ html, body{
           box-shadow:  0px 4px 5px 0px #8783b0;
           cursor: pointer;
           transition: all 0.4s ease;
+          color: white;
+          font: bold 1.25rem 'ProximaNova-Bold', sans-serif;
+          text-align: center;
+          line-height: 70px;
           &:hover {
             box-shadow:  0px 10px 5px 0px #8783b0;
             transform: translate(-2px, -6px);

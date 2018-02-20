@@ -1,0 +1,679 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i");
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url("../fonts/ProximaNova-Bold.eot");
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    background: transparent;
+    color: transparent; }
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+      opacity: 1; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev {
+  left: -25px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  .slick-prev:before {
+    content: "←"; }
+    [dir="rtl"] .slick-prev:before {
+      content: "→"; }
+
+.slick-next {
+  right: -25px; }
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  .slick-next:before {
+    content: "→"; }
+    [dir="rtl"] .slick-next:before {
+      content: "←"; }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: 0.75; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+  html .name-block img, body .name-block img {
+    display: block;
+    margin: 0 auto 45px; }
+  html .name-block h2, body .name-block h2 {
+    font: bold 2.25rem 'ProximaNova-Bold', sans-serif;
+    color: white;
+    text-align: center;
+    text-transform: uppercase; }
+  html header, body header {
+    background: url("../img/bg1.jpg") no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 55px 30px;
+    min-height: 100vh; }
+    html header .navbar, body header .navbar {
+      margin-bottom: 300px; }
+      html header .navbar .navbar-brand img, body header .navbar .navbar-brand img {
+        width: 55px;
+        height: 72px; }
+      html header .navbar .collapse, body header .navbar .collapse {
+        justify-content: flex-end; }
+        html header .navbar .collapse .navbar-nav, body header .navbar .collapse .navbar-nav {
+          min-width: 600px;
+          justify-content: space-between; }
+          html header .navbar .collapse .navbar-nav .nav-link, body header .navbar .collapse .navbar-nav .nav-link {
+            color: #ffffff;
+            font: bold 1.5rem 'ProximaNova-Bold', sans-serif;
+            text-transform: uppercase; }
+    html header .text-inner, body header .text-inner {
+      margin: 0 auto;
+      max-width: 1050px; }
+      html header .text-inner h1, body header .text-inner h1 {
+        color: #ffffff;
+        font: bold 4.5rem 'ProximaNova-Bold', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 45px; }
+      html header .text-inner p, body header .text-inner p {
+        color: #ffffff;
+        font: italic normal  1.9rem 'PT Sans', sans-serif;
+        text-align: center; }
+  html #about, body #about {
+    padding: 125px 30px 0; }
+    html #about .present-block, body #about .present-block {
+      margin: 0 auto 120px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1230px; }
+      html #about .present-block .left-block, body #about .present-block .left-block {
+        padding: 45px 10px;
+        background: url("../img/pic_1.jpg") no-repeat;
+        background-size: cover;
+        width: 380px;
+        height: 555px; }
+      html #about .present-block .right-block, body #about .present-block .right-block {
+        padding: 75px 30px 15px;
+        max-width: 690px;
+        box-sizing: border-box; }
+        html #about .present-block .right-block p, body #about .present-block .right-block p {
+          margin-bottom: 35px;
+          font: normal  1.25rem 'PT Sans', sans-serif; }
+          html #about .present-block .right-block p .s-b, body #about .present-block .right-block p .s-b {
+            font: bold  1.25rem 'PT Sans', sans-serif; }
+          html #about .present-block .right-block p .s-i, body #about .present-block .right-block p .s-i {
+            font: italic normal  1.25rem 'PT Sans', sans-serif; }
+          html #about .present-block .right-block p:last-of-type, body #about .present-block .right-block p:last-of-type {
+            margin-bottom: 95px; }
+        html #about .present-block .right-block .btn-1, body #about .present-block .right-block .btn-1 {
+          font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
+          text-align: center;
+          color: black;
+          border: solid 1px black;
+          display: block;
+          width: 195px;
+          height: 50px;
+          box-sizing: border-box;
+          margin: 0 auto;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all .4s ease; }
+          html #about .present-block .right-block .btn-1:hover, body #about .present-block .right-block .btn-1:hover {
+            transform: translate(-7px, -9px);
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.55);
+            transition: all .4s ease; }
+      @media all and (max-width: 930px) {
+        html #about .present-block, body #about .present-block {
+          flex-direction: column;
+          justify-content: space-around; }
+          html #about .present-block .left-block, body #about .present-block .left-block {
+            height: 300px;
+            width: 100%; }
+          html #about .present-block .right-block, body #about .present-block .right-block {
+            width: 100%;
+            height: auto; } }
+    html #about .content-block, body #about .content-block {
+      margin: 0 auto;
+      max-width: 1200px; }
+      @media all and (max-width: 1245px) {
+        html #about .content-block, body #about .content-block {
+          width: 800px; } }
+      @media all and (max-width: 855px) {
+        html #about .content-block, body #about .content-block {
+          width: 400px; } }
+      html #about .content-block:after, body #about .content-block:after {
+        content: '';
+        display: block;
+        clear: both; }
+      html #about .content-block .rectangle, body #about .content-block .rectangle {
+        position: relative;
+        perspective: 600px;
+        transform-style: preserve-3d;
+        float: left;
+        width: 390px;
+        height: 400px;
+        box-sizing: border-box; }
+        html #about .content-block .rectangle-front, body #about .content-block .rectangle-front {
+          width: 100%;
+          height: 100%;
+          padding: 100px;
+          position: absolute;
+          z-index: 1;
+          transition: transform .4s ease;
+          backface-visibility: hidden;
+          background: white; }
+        html #about .content-block .rectangle-back, body #about .content-block .rectangle-back {
+          width: 100%;
+          height: 100%;
+          padding: 15px;
+          background: #b4b2d6;
+          position: absolute;
+          transition: transform .4s ease;
+          transform: rotateY(-180deg); }
+          html #about .content-block .rectangle-back .text-inner, body #about .content-block .rectangle-back .text-inner {
+            font: italic normal  1.25rem 'PT Sans', sans-serif;
+            color: white;
+            margin-bottom: 30px; }
+          html #about .content-block .rectangle-back .btn2, body #about .content-block .rectangle-back .btn2 {
+            font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
+            text-align: center;
+            color: white;
+            border: solid 1px white;
+            display: block;
+            width: 195px;
+            height: 50px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.4s ease; }
+            html #about .content-block .rectangle-back .btn2:hover, body #about .content-block .rectangle-back .btn2:hover {
+              background: #9f9acf;
+              transition: background 0.4s ease; }
+        html #about .content-block .rectangle:hover, body #about .content-block .rectangle:hover {
+          z-index: 4; }
+          html #about .content-block .rectangle:hover .rectangle-front, body #about .content-block .rectangle:hover .rectangle-front {
+            transform: rotateY(180deg);
+            transition: transform .4s ease; }
+          html #about .content-block .rectangle:hover .rectangle-back, body #about .content-block .rectangle:hover .rectangle-back {
+            transform: rotateY(0deg);
+            transition: transform .4s ease; }
+        html #about .content-block .rectangle_1g .rectangle-front, body #about .content-block .rectangle_1g .rectangle-front {
+          background: #dbdbdb; }
+        html #about .content-block .rectangle_1g .rectangle-back, body #about .content-block .rectangle_1g .rectangle-back {
+          background: #b4b2d6; }
+        html #about .content-block .rectangle img, body #about .content-block .rectangle img {
+          display: block;
+          margin: 0 auto 30px; }
+        html #about .content-block .rectangle h3, body #about .content-block .rectangle h3 {
+          font: bold  1.5rem 'PT Sans', sans-serif;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 20px; }
+        html #about .content-block .rectangle p, body #about .content-block .rectangle p {
+          font: italic normal  1.25rem 'PT Sans', sans-serif;
+          text-align: center; }
+        html #about .content-block .rectangle--height2, body #about .content-block .rectangle--height2 {
+          height: 800px; }
+        html #about .content-block .rectangle_2 .rectangle-front, body #about .content-block .rectangle_2 .rectangle-front {
+          background: url("../img/pic_1.jpg") no-repeat;
+          background-size: cover;
+          padding: 115px 30px; }
+        html #about .content-block .rectangle_2 .rectangle-back, body #about .content-block .rectangle_2 .rectangle-back {
+          background: #b4b2d6; }
+        html #about .content-block .rectangle_2 h3, body #about .content-block .rectangle_2 h3 {
+          font: bold 2.25rem 'ProximaNova-Bold', sans-serif;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 30px;
+          color: white; }
+        html #about .content-block .rectangle_2 p, body #about .content-block .rectangle_2 p {
+          color: white; }
+          html #about .content-block .rectangle_2 p span, body #about .content-block .rectangle_2 p span {
+            font: bold  1.25rem 'PT Sans', sans-serif;
+            text-align: center; }
+        @media all and (max-width: 1245px) {
+          html #about .content-block .rectangle.s1 .rectangle-front, body #about .content-block .rectangle.s1 .rectangle-front {
+            background: #dbdbdb; }
+          html #about .content-block .rectangle.s2 .rectangle-front, body #about .content-block .rectangle.s2 .rectangle-front {
+            background: white; } }
+  html #recent, body #recent {
+    background: url("../img/bg2.jpg") no-repeat;
+    background-size: cover;
+    padding: 50px 30px 60px; }
+    html #recent .name-block, body #recent .name-block {
+      margin-bottom: 60px; }
+    html #recent .container, body #recent .container {
+      margin-bottom: 100px; }
+      html #recent .container .carousel-indicators, body #recent .container .carousel-indicators {
+        bottom: -65px; }
+        html #recent .container .carousel-indicators li, body #recent .container .carousel-indicators li {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          box-sizing: border-box;
+          border: solid 2px #ebebeb;
+          border-radius: 50%;
+          margin: 6px;
+          background: transparent; }
+          html #recent .container .carousel-indicators li.active, body #recent .container .carousel-indicators li.active {
+            background: #ebebeb; }
+      html #recent .container .carousel-control-prev, html #recent .container .carousel-control-next, body #recent .container .carousel-control-prev, body #recent .container .carousel-control-next {
+        width: 22px;
+        height: 38px;
+        top: 50%;
+        transform: translateY(-50%); }
+      html #recent .container .carousel-control-prev, body #recent .container .carousel-control-prev {
+        left: -100px; }
+        html #recent .container .carousel-control-prev .carousel-control-prev-icon, body #recent .container .carousel-control-prev .carousel-control-prev-icon {
+          background: url("../img/prev.svg");
+          width: 22px;
+          height: 38px; }
+      html #recent .container .carousel-control-next, body #recent .container .carousel-control-next {
+        right: -100px; }
+        html #recent .container .carousel-control-next .carousel-control-next-icon, body #recent .container .carousel-control-next .carousel-control-next-icon {
+          width: 22px;
+          height: 38px;
+          background: url("../img/next.svg"); }
+    html #recent .btn3, body #recent .btn3 {
+      font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
+      text-align: center;
+      color: white;
+      border: solid 1px white;
+      display: block;
+      width: 195px;
+      height: 50px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .4s ease; }
+      html #recent .btn3:hover, body #recent .btn3:hover {
+        transform: translate(-7px, -9px);
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.55);
+        transition: all .4s ease; }
+  html #team, body #team {
+    background: #ebebeb;
+    padding: 50px 30px 100px; }
+    html #team .name-block, body #team .name-block {
+      margin-bottom: 70px; }
+      html #team .name-block h2, body #team .name-block h2 {
+        color: black; }
+    html #team .card-item, body #team .card-item {
+      position: relative;
+      max-width: 350px;
+      margin-top: 129px; }
+      html #team .card-item .face, body #team .card-item .face {
+        display: block;
+        width: 260px;
+        height: 258px;
+        position: absolute;
+        top: -129px;
+        left: 50%;
+        transform: translateX(-50%); }
+      html #team .card-item .text_block, body #team .card-item .text_block {
+        background: white;
+        padding: 160px 0 50px 0; }
+        html #team .card-item .text_block .name, body #team .card-item .text_block .name {
+          color: #9f9acf;
+          font: bold 1.5rem 'ProximaNova-Bold', sans-serif;
+          text-align: center;
+          margin-bottom: 35px; }
+        html #team .card-item .text_block .position, body #team .card-item .text_block .position {
+          font: italic normal  1.5rem 'PT Sans', sans-serif;
+          text-align: center; }
+      html #team .card-item .social_links, body #team .card-item .social_links {
+        background: #9f9acf;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 20px; }
+        html #team .card-item .social_links img, body #team .card-item .social_links img {
+          transition: all .4s ease; }
+          html #team .card-item .social_links img:hover, body #team .card-item .social_links img:hover {
+            transform: translate(0, -7px);
+            transition: all .4s ease; }
+    html #team .slide-contein, body #team .slide-contein {
+      width: 80vw;
+      margin: 0 auto; }
+      html #team .slide-contein .slick-arrow, body #team .slide-contein .slick-arrow {
+        display: none;
+        width: 0;
+        height: 0;
+        padding: 0;
+        border: none;
+        font-size: 0; }
+        html #team .slide-contein .slick-arrow.slick-prev:before, body #team .slide-contein .slick-arrow.slick-prev:before {
+          display: block;
+          width: 22px;
+          height: 38px;
+          background: url("../img/prev1.svg");
+          position: absolute;
+          top: calc(50% - 19px);
+          left: -50px;
+          content: '';
+          font-size: 0;
+          z-index: 10; }
+        html #team .slide-contein .slick-arrow.slick-next:before, body #team .slide-contein .slick-arrow.slick-next:before {
+          display: block;
+          width: 22px;
+          height: 38px;
+          background: url("../img/next1.svg");
+          position: absolute;
+          top: calc(50% - 19px);
+          right: -50px;
+          content: '';
+          font-size: 0;
+          z-index: 10; }
+  html #get-in-touch, body #get-in-touch {
+    position: relative;
+    overflow: hidden;
+    min-height: 900px; }
+    html #get-in-touch .slide-info, body #get-in-touch .slide-info {
+      position: absolute;
+      overflow: hidden;
+      box-sizing: border-box;
+      z-index: 3;
+      height: 90px;
+      width: 347px;
+      right: 0;
+      margin-right: -257px;
+      background: rgba(159, 154, 207, 0.3);
+      transition: margin-right 0.4s ease;
+      cursor: pointer; }
+      html #get-in-touch .slide-info:hover, body #get-in-touch .slide-info:hover {
+        margin-right: 0;
+        transition: margin-right 0.4s ease; }
+      html #get-in-touch .slide-info .pic, body #get-in-touch .slide-info .pic {
+        background: #9f9acf;
+        width: 90px;
+        height: 90px;
+        float: left;
+        display: flex; }
+        html #get-in-touch .slide-info .pic img, body #get-in-touch .slide-info .pic img {
+          margin: auto; }
+      html #get-in-touch .slide-info .info, body #get-in-touch .slide-info .info {
+        display: flex;
+        height: 100%; }
+        html #get-in-touch .slide-info .info span, body #get-in-touch .slide-info .info span {
+          margin: auto;
+          font: normal  1.15rem 'PT Sans', sans-serif;
+          text-align: center; }
+      html #get-in-touch .slide-info.slide-home, body #get-in-touch .slide-info.slide-home {
+        top: 220px; }
+      html #get-in-touch .slide-info.slide-phone, body #get-in-touch .slide-info.slide-phone {
+        top: 310px; }
+    html #get-in-touch .home-link, body #get-in-touch .home-link {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      background: rgba(159, 154, 207, 0.3);
+      cursor: pointer;
+      z-index: 3;
+      transition: background 0.4s ease; }
+      html #get-in-touch .home-link:hover, body #get-in-touch .home-link:hover {
+        background: #9f9acf;
+        transition: background 0.4s ease; }
+      html #get-in-touch .home-link img, body #get-in-touch .home-link img {
+        margin: auto; }
+    html #get-in-touch .front-layer, body #get-in-touch .front-layer {
+      z-index: 2;
+      position: absolute;
+      background: rgba(159, 154, 207, 0.3);
+      padding: 55px 0 15px;
+      height: 100%;
+      width: 100vw; }
+      html #get-in-touch .front-layer .name-block, body #get-in-touch .front-layer .name-block {
+        margin-bottom: 270px; }
+      html #get-in-touch .front-layer #form-get, body #get-in-touch .front-layer #form-get {
+        max-width: 865px;
+        margin: 0 auto;
+        font-size: 0; }
+        html #get-in-touch .front-layer #form-get #get-massage, body #get-in-touch .front-layer #form-get #get-massage {
+          width: 100%;
+          margin: 0 0 55px;
+          min-width: 200px; }
+        html #get-in-touch .front-layer #form-get #get-email, html #get-in-touch .front-layer #form-get #get-name, body #get-in-touch .front-layer #form-get #get-email, body #get-in-touch .front-layer #form-get #get-name {
+          margin: 0 0 27px;
+          height: 56px;
+          width: calc(50% - 15px);
+          font-size: 0; }
+        html #get-in-touch .front-layer #form-get #get-name, body #get-in-touch .front-layer #form-get #get-name {
+          margin-right: 30px; }
+        html #get-in-touch .front-layer #form-get #get-email, html #get-in-touch .front-layer #form-get #get-name, html #get-in-touch .front-layer #form-get #get-massage, body #get-in-touch .front-layer #form-get #get-email, body #get-in-touch .front-layer #form-get #get-name, body #get-in-touch .front-layer #form-get #get-massage {
+          box-sizing: border-box;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 3px;
+          font: italic normal  1.1rem 'PT Sans', sans-serif;
+          line-height: 56px;
+          outline: none;
+          border: none;
+          transition: background 0.4s ease;
+          padding: 0 27px; }
+          html #get-in-touch .front-layer #form-get #get-email::-webkit-input-placeholder, html #get-in-touch .front-layer #form-get #get-name::-webkit-input-placeholder, html #get-in-touch .front-layer #form-get #get-massage::-webkit-input-placeholder, body #get-in-touch .front-layer #form-get #get-email::-webkit-input-placeholder, body #get-in-touch .front-layer #form-get #get-name::-webkit-input-placeholder, body #get-in-touch .front-layer #form-get #get-massage::-webkit-input-placeholder {
+            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            line-height: 56px;
+            color: white; }
+          html #get-in-touch .front-layer #form-get #get-email::-moz-placeholder, html #get-in-touch .front-layer #form-get #get-name::-moz-placeholder, html #get-in-touch .front-layer #form-get #get-massage::-moz-placeholder, body #get-in-touch .front-layer #form-get #get-email::-moz-placeholder, body #get-in-touch .front-layer #form-get #get-name::-moz-placeholder, body #get-in-touch .front-layer #form-get #get-massage::-moz-placeholder {
+            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            line-height: 56px;
+            color: white; }
+          html #get-in-touch .front-layer #form-get #get-email:-moz-placeholder, html #get-in-touch .front-layer #form-get #get-name:-moz-placeholder, html #get-in-touch .front-layer #form-get #get-massage:-moz-placeholder, body #get-in-touch .front-layer #form-get #get-email:-moz-placeholder, body #get-in-touch .front-layer #form-get #get-name:-moz-placeholder, body #get-in-touch .front-layer #form-get #get-massage:-moz-placeholder {
+            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            line-height: 56px;
+            color: white; }
+          html #get-in-touch .front-layer #form-get #get-email:-ms-input-placeholder, html #get-in-touch .front-layer #form-get #get-name:-ms-input-placeholder, html #get-in-touch .front-layer #form-get #get-massage:-ms-input-placeholder, body #get-in-touch .front-layer #form-get #get-email:-ms-input-placeholder, body #get-in-touch .front-layer #form-get #get-name:-ms-input-placeholder, body #get-in-touch .front-layer #form-get #get-massage:-ms-input-placeholder {
+            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            line-height: 56px;
+            color: white; }
+          html #get-in-touch .front-layer #form-get #get-email:focus, html #get-in-touch .front-layer #form-get #get-name:focus, html #get-in-touch .front-layer #form-get #get-massage:focus, body #get-in-touch .front-layer #form-get #get-email:focus, body #get-in-touch .front-layer #form-get #get-name:focus, body #get-in-touch .front-layer #form-get #get-massage:focus {
+            background: white;
+            transition: background 1s ease; }
+        html #get-in-touch .front-layer #form-get .submit, body #get-in-touch .front-layer #form-get .submit {
+          box-sizing: border-box;
+          text-transform: uppercase;
+          display: block;
+          height: 70px;
+          width: 293px;
+          margin: 0 auto;
+          border: none;
+          background: #9f9acf;
+          border-radius: 3px;
+          box-shadow: 0px 4px 5px 0px #8783b0;
+          cursor: pointer;
+          transition: all 0.4s ease;
+          color: white;
+          font: bold 1.25rem 'ProximaNova-Bold', sans-serif;
+          text-align: center;
+          line-height: 70px; }
+          html #get-in-touch .front-layer #form-get .submit:hover, body #get-in-touch .front-layer #form-get .submit:hover {
+            box-shadow: 0px 10px 5px 0px #8783b0;
+            transform: translate(-2px, -6px);
+            transition: all 0.4s ease; }
+    html #get-in-touch .back-layer, body #get-in-touch .back-layer {
+      z-index: 1;
+      position: absolute;
+      height: 100%;
+      width: 100vw; }
+
+/*# sourceMappingURL=main.css.map */

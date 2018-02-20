@@ -168,7 +168,6 @@ html, body{
         width: 390px;
         height: 400px;
         box-sizing: border-box;
-
         &-front {
           width: 100%;
           height: 100%;
@@ -212,14 +211,13 @@ html, body{
           }
         }
         &:hover {
+          z-index: 4;
           & .rectangle-front{
-            z-index: 30;
             transform: rotateY(180deg);
             transition: transform .4s ease;
           }
           & .rectangle-back
           {
-            z-index: 20;
             transform: rotateY(0deg);
             transition: transform .4s ease;
           }
@@ -440,6 +438,7 @@ html, body{
 
   #get-in-touch {
     position: relative;
+    overflow: hidden;
     min-height: 900px;
     .slide-info {
       position: absolute;
@@ -503,11 +502,15 @@ html, body{
       }
     }
     .front-layer  {
+      z-index: 2;
       position: absolute;
       background: rgba(159, 154, 207, 0.3);
-      padding: 55px 0;
+      padding: 55px 0 15px;
       height: 100%;
       width: 100vw;
+      //@media all and max-width: 930px {
+      //
+      //}
       .name-block {
         margin-bottom: 270px;
       }
@@ -589,6 +592,13 @@ html, body{
         }
 
       }
+    }
+
+    .back-layer {
+      z-index: 1;
+      position: absolute;
+      height: 100%;
+      width: 100vw;
     }
   }
 

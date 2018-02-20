@@ -242,7 +242,28 @@ html, body {
           html header .navbar .navbar-collapse .navbar-nav .nav-link, body header .navbar .navbar-collapse .navbar-nav .nav-link {
             color: #ffffff;
             font: bold 1.5rem 'ProximaNova-Bold', sans-serif;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            position: relative;
+            vertical-align: middle; }
+            html header .navbar .navbar-collapse .navbar-nav .nav-link:before, html header .navbar .navbar-collapse .navbar-nav .nav-link:after, body header .navbar .navbar-collapse .navbar-nav .nav-link:before, body header .navbar .navbar-collapse .navbar-nav .nav-link:after {
+              content: '';
+              display: block;
+              background: white;
+              opacity: 1;
+              width: 100%;
+              height: 2px; }
+            html header .navbar .navbar-collapse .navbar-nav .nav-link:after, body header .navbar .navbar-collapse .navbar-nav .nav-link:after {
+              margin-top: 10px;
+              bottom: 10px; }
+            html header .navbar .navbar-collapse .navbar-nav .nav-link:before, body header .navbar .navbar-collapse .navbar-nav .nav-link:before {
+              margin-bottom: 10px;
+              top: 10px; }
+            html header .navbar .navbar-collapse .navbar-nav .nav-link:hover, body header .navbar .navbar-collapse .navbar-nav .nav-link:hover {
+              opacity: 1; }
+              html header .navbar .navbar-collapse .navbar-nav .nav-link:hover:before, body header .navbar .navbar-collapse .navbar-nav .nav-link:hover:before {
+                margin-bottom: 0; }
+              html header .navbar .navbar-collapse .navbar-nav .nav-link:hover:after, body header .navbar .navbar-collapse .navbar-nav .nav-link:hover:after {
+                margin-top: 0; }
     html header .text-inner, body header .text-inner {
       margin: 0 auto;
       max-width: 1050px; }
@@ -340,18 +361,19 @@ html, body {
           backface-visibility: hidden;
           background: white; }
         html #about .content-block .rectangle-back, body #about .content-block .rectangle-back {
+          transition: transform .4s ease;
+          transform: rotateY(-180deg); }
+        html #about .content-block .rectangle-back, html #about .content-block .rectangle-down, body #about .content-block .rectangle-back, body #about .content-block .rectangle-down {
           width: 100%;
           height: 100%;
           padding: 15px;
           background: #b4b2d6;
-          position: absolute;
-          transition: transform .4s ease;
-          transform: rotateY(-180deg); }
-          html #about .content-block .rectangle-back .text-inner, body #about .content-block .rectangle-back .text-inner {
+          position: absolute; }
+          html #about .content-block .rectangle-back .text-inner, html #about .content-block .rectangle-down .text-inner, body #about .content-block .rectangle-back .text-inner, body #about .content-block .rectangle-down .text-inner {
             font: italic normal  1.25rem 'PT Sans', sans-serif;
             color: white;
             margin-bottom: 30px; }
-          html #about .content-block .rectangle-back .btn2, body #about .content-block .rectangle-back .btn2 {
+          html #about .content-block .rectangle-back .btn2, html #about .content-block .rectangle-down .btn2, body #about .content-block .rectangle-back .btn2, body #about .content-block .rectangle-down .btn2 {
             font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
             text-align: center;
             color: white;
@@ -364,7 +386,7 @@ html, body {
             text-decoration: none;
             cursor: pointer;
             transition: background 0.4s ease; }
-            html #about .content-block .rectangle-back .btn2:hover, body #about .content-block .rectangle-back .btn2:hover {
+            html #about .content-block .rectangle-back .btn2:hover, html #about .content-block .rectangle-down .btn2:hover, body #about .content-block .rectangle-back .btn2:hover, body #about .content-block .rectangle-down .btn2:hover {
               background: #9f9acf;
               transition: background 0.4s ease; }
         html #about .content-block .rectangle:hover, body #about .content-block .rectangle:hover {
@@ -392,23 +414,34 @@ html, body {
           text-align: center; }
         html #about .content-block .rectangle--height2, body #about .content-block .rectangle--height2 {
           height: 800px; }
-        html #about .content-block .rectangle_2 .rectangle-front, body #about .content-block .rectangle_2 .rectangle-front {
-          background: url("../img/pic_1.jpg") no-repeat;
-          background-size: cover;
-          padding: 115px 30px; }
-        html #about .content-block .rectangle_2 .rectangle-back, body #about .content-block .rectangle_2 .rectangle-back {
-          background: #b4b2d6; }
-        html #about .content-block .rectangle_2 h3, body #about .content-block .rectangle_2 h3 {
-          font: bold 2.25rem 'ProximaNova-Bold', sans-serif;
-          text-transform: uppercase;
-          text-align: center;
-          margin-bottom: 30px;
-          color: white; }
-        html #about .content-block .rectangle_2 p, body #about .content-block .rectangle_2 p {
-          color: white; }
-          html #about .content-block .rectangle_2 p span, body #about .content-block .rectangle_2 p span {
-            font: bold  1.25rem 'PT Sans', sans-serif;
-            text-align: center; }
+        html #about .content-block .rectangle_2, body #about .content-block .rectangle_2 {
+          overflow: hidden; }
+          html #about .content-block .rectangle_2 .rectangle-up, body #about .content-block .rectangle_2 .rectangle-up {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("../img/pic_1.jpg") no-repeat;
+            background-size: cover;
+            padding: 115px 30px;
+            transition: all .6s ease;
+            right: 0; }
+          html #about .content-block .rectangle_2 .rectangle-down, body #about .content-block .rectangle_2 .rectangle-down {
+            transition: all .6s ease;
+            right: -390px; }
+          html #about .content-block .rectangle_2:hover .rectangle-up, html #about .content-block .rectangle_2:hover .rectangle-down, body #about .content-block .rectangle_2:hover .rectangle-up, body #about .content-block .rectangle_2:hover .rectangle-down {
+            transition: all .6s ease;
+            margin-right: 390px; }
+          html #about .content-block .rectangle_2 h3, body #about .content-block .rectangle_2 h3 {
+            font: bold 2.25rem 'ProximaNova-Bold', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white; }
+          html #about .content-block .rectangle_2 p, body #about .content-block .rectangle_2 p {
+            color: white; }
+            html #about .content-block .rectangle_2 p span, body #about .content-block .rectangle_2 p span {
+              font: bold  1.25rem 'PT Sans', sans-serif;
+              text-align: center; }
         @media all and (max-width: 1245px) {
           html #about .content-block .rectangle.s1 .rectangle-front, body #about .content-block .rectangle.s1 .rectangle-front {
             background: #dbdbdb; }

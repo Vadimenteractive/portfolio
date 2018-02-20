@@ -61,13 +61,14 @@ html, body{
     min-height: 100vh;
     .navbar {
       margin-bottom: 300px;
+      height: 98px;
       .navbar-brand {
         img{
           width: 55px;
           height: 72px;
         }
       }
-      .collapse {
+      .navbar-collapse {
         justify-content: flex-end;
         .navbar-nav {
           min-width: 600px;

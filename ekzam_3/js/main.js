@@ -24,13 +24,21 @@
                 {
                     breakpoint: 728,
                     settings: {
+                        centerMode: true,
                         slidesToShow: 1
                     }
                 }
             ]
         })
 
-
+        $(document).ready(function() {
+            $("a.nav-link").click(function () {
+                var elementClick = $(this).attr("href");
+                var destination = $(elementClick).offset().top;
+                $('html,body').animate( { scrollTop: destination }, 700 );
+                return false;
+            });
+        });
     })
 })(jQuery);
 

@@ -229,16 +229,17 @@ html, body {
     padding: 55px 30px;
     min-height: 100vh; }
     html header .navbar, body header .navbar {
-      margin-bottom: 300px; }
+      margin-bottom: 300px;
+      height: 98px; }
       html header .navbar .navbar-brand img, body header .navbar .navbar-brand img {
         width: 55px;
         height: 72px; }
-      html header .navbar .collapse, body header .navbar .collapse {
+      html header .navbar .navbar-collapse, body header .navbar .navbar-collapse {
         justify-content: flex-end; }
-        html header .navbar .collapse .navbar-nav, body header .navbar .collapse .navbar-nav {
+        html header .navbar .navbar-collapse .navbar-nav, body header .navbar .navbar-collapse .navbar-nav {
           min-width: 600px;
           justify-content: space-between; }
-          html header .navbar .collapse .navbar-nav .nav-link, body header .navbar .collapse .navbar-nav .nav-link {
+          html header .navbar .navbar-collapse .navbar-nav .nav-link, body header .navbar .navbar-collapse .navbar-nav .nav-link {
             color: #ffffff;
             font: bold 1.5rem 'ProximaNova-Bold', sans-serif;
             text-transform: uppercase; }

@@ -593,6 +593,9 @@ html, body {
       position: relative;
       max-width: 350px;
       margin-top: 129px; }
+      @media all and (max-width: 928px) {
+        html #team .card-item, body #team .card-item {
+          margin: 129px auto 0; } }
       html #team .card-item .face, body #team .card-item .face {
         display: block;
         width: 260px;

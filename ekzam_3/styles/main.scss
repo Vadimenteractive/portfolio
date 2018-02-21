@@ -485,6 +485,9 @@ html, body {
       position: relative;
       max-width: 350px;
       margin-top: 129px;
+      @media all and (max-width: 928px) {
+        margin:129px auto 0;
+      }
       .face {
         display: block;
         width: 260px;

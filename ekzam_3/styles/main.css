@@ -271,6 +271,8 @@ html, body {
     html header .navbar, body header .navbar {
       margin-bottom: 300px;
       height: 98px; }
+      html header .navbar .nav-item, body header .navbar .nav-item {
+        z-index: 2; }
       @media all and (max-width: 560px) {
         html header .navbar, body header .navbar {
           margin-bottom: 225px; } }
@@ -281,7 +283,6 @@ html, body {
       html header .navbar .navbar-collapse, body header .navbar .navbar-collapse {
         justify-content: flex-end; }
         html header .navbar .navbar-collapse .navbar-nav, body header .navbar .navbar-collapse .navbar-nav {
-          z-index: 2;
           min-width: 600px;
           justify-content: space-between; }
           html header .navbar .navbar-collapse .navbar-nav .nav-link, body header .navbar .navbar-collapse .navbar-nav .nav-link {
@@ -399,6 +400,9 @@ html, body {
       @media all and (max-width: 855px) {
         html #about .content-block, body #about .content-block {
           width: 400px; } }
+      @media all and (max-width: 560px) {
+        html #about .content-block, body #about .content-block {
+          width: 100vw; } }
       html #about .content-block:after, body #about .content-block:after {
         content: '';
         display: block;
@@ -491,9 +495,15 @@ html, body {
           html #about .content-block .rectangle_2 .rectangle-down, body #about .content-block .rectangle_2 .rectangle-down {
             transition: all .6s ease;
             right: -390px; }
+            @media all and (max-width: 560px) {
+              html #about .content-block .rectangle_2 .rectangle-down, body #about .content-block .rectangle_2 .rectangle-down {
+                right: -100vw; } }
           html #about .content-block .rectangle_2:hover .rectangle-up, html #about .content-block .rectangle_2:hover .rectangle-down, body #about .content-block .rectangle_2:hover .rectangle-up, body #about .content-block .rectangle_2:hover .rectangle-down {
             transition: all .6s ease;
             margin-right: 390px; }
+            @media all and (max-width: 560px) {
+              html #about .content-block .rectangle_2:hover .rectangle-up, html #about .content-block .rectangle_2:hover .rectangle-down, body #about .content-block .rectangle_2:hover .rectangle-up, body #about .content-block .rectangle_2:hover .rectangle-down {
+                margin-right: 100vw; } }
           html #about .content-block .rectangle_2 h3, body #about .content-block .rectangle_2 h3 {
             font: bold 2.25rem 'ProximaNova-Bold', sans-serif;
             text-transform: uppercase;
@@ -668,7 +678,8 @@ html, body {
   html #get-in-touch, body #get-in-touch {
     position: relative;
     overflow: hidden;
-    min-height: 900px; }
+    min-height: 900px;
+    background: #9f9acf; }
     html #get-in-touch .slide-info, body #get-in-touch .slide-info {
       position: absolute;
       overflow: hidden;
@@ -718,7 +729,11 @@ html, body {
         display: flex; }
       @media all and (max-width: 576px) {
         html #get-in-touch .home-link, body #get-in-touch .home-link {
-          top: 30px; } }
+          top: 20px;
+          right: 20px;
+          width: 50px;
+          height: 50px;
+          padding: 0; } }
       html #get-in-touch .home-link:hover, body #get-in-touch .home-link:hover {
         background: #9f9acf;
         transition: background 0.4s ease; }
@@ -727,13 +742,16 @@ html, body {
     html #get-in-touch .front-layer, body #get-in-touch .front-layer {
       z-index: 2;
       position: absolute;
-      background: rgba(159, 154, 207, 0.3);
       padding: 55px 0 15px;
       height: 100%;
       width: 100vw; }
       html #get-in-touch .front-layer .name-block, body #get-in-touch .front-layer .name-block {
-        margin-bottom: 270px; }
+        margin-bottom: 270px;
+        z-index: 2;
+        position: relative; }
       html #get-in-touch .front-layer #form-get, body #get-in-touch .front-layer #form-get {
+        z-index: 2;
+        position: relative;
         max-width: 865px;
         width: 85vw;
         margin: 0 auto;
@@ -805,11 +823,13 @@ html, body {
             box-shadow: 0px 10px 5px 0px #8783b0;
             transform: translate(-2px, -6px);
             transition: all 0.4s ease; }
-    html #get-in-touch .back-layer, body #get-in-touch .back-layer {
-      z-index: 1;
-      position: absolute;
-      height: 100%;
-      width: 100vw; }
+      html #get-in-touch .front-layer .back-layer, body #get-in-touch .front-layer .back-layer {
+        opacity: 0.7;
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        top: 0; }
   html .footer, body .footer {
     background: #9f9acf;
     min-height: 185px;

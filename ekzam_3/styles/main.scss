@@ -109,6 +109,9 @@ html, body {
     .navbar {
       margin-bottom: 300px;
       height: 98px;
+      .nav-item {
+        z-index: 2;
+      }
       @media all and (max-width: 560px) {
         margin-bottom: 225px;
       }
@@ -122,7 +125,6 @@ html, body {
       .navbar-collapse {
         justify-content: flex-end;
         .navbar-nav {
-          z-index: 2;
           min-width: 600px;
           justify-content: space-between;
           .nav-link {
@@ -252,6 +254,9 @@ html, body {
       @media all and (max-width: 855px) {
         width: 400px;
       }
+      @media all and (max-width: 560px) {
+        width: 100vw;
+      }
       &:after {
         content: '';
         display: block;
@@ -364,11 +369,17 @@ html, body {
           .rectangle-down {
             transition: all .6s ease;
             right: -390px;
+            @media all and (max-width: 560px) {
+              right: -100vw;
+            }
           }
           &:hover {
             .rectangle-up, .rectangle-down {
               transition: all .6s ease;
               margin-right: 390px;
+              @media all and (max-width: 560px) {
+                margin-right: 100vw;
+              }
             }
           }
           h3 {
@@ -579,6 +590,7 @@ html, body {
     position: relative;
     overflow: hidden;
     min-height: 900px;
+    background: #9f9acf;
     .slide-info {
       position: absolute;
       overflow: hidden;
@@ -636,7 +648,11 @@ html, body {
         display: flex;
       }
       @media all and (max-width: 576px) {
-        top: 30px;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        padding: 0;
       }
       &:hover {
         background: #9f9acf;
@@ -649,14 +665,17 @@ html, body {
     .front-layer {
       z-index: 2;
       position: absolute;
-      background: rgba(159, 154, 207, 0.3);
       padding: 55px 0 15px;
       height: 100%;
       width: 100vw;
       .name-block {
         margin-bottom: 270px;
+        z-index: 2;
+        position: relative;
       }
       #form-get {
+        z-index: 2;
+        position: relative;
         max-width: 865px;
         width: 85vw;
         margin: 0 auto;
@@ -739,14 +758,15 @@ html, body {
             transition: all 0.4s ease;
           }
         }
-
       }
-    }
-    .back-layer {
-      z-index: 1;
-      position: absolute;
-      height: 100%;
-      width: 100vw;
+      .back-layer {
+        opacity: 0.7;
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        top: 0;
+      }
     }
   }
 

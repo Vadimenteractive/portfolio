@@ -22,9 +22,9 @@
                     }
                 },
                 {
-                    breakpoint: 728,
+                    breakpoint: 640,
                     settings: {
-                        scenterMode: true,
+                        centerMode: true,
                         slidesToShow: 1
                     }
                 }

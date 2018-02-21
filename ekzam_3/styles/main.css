@@ -230,33 +230,58 @@ html, body {
     min-height: 100vh; }
     html header #logo, body header #logo {
       position: relative; }
-      html header #logo:before, body header #logo:before {
-        display: block;
-        content: '';
+      html header #logo img, body header #logo img {
+        z-index: 1; }
+      html header #logo .bg1, body header #logo .bg1 {
         position: absolute;
+        display: block;
+        top: 0;
         right: 0;
         left: 0;
-        top: 0;
         bottom: 0;
         margin: auto;
-        width: 30px;
-        height: 30px;
-        border: solid 1px #f6f6f6;
-        border-radius: 50%;
-        opacity: 0; }
-      html header #logo:hover:before, body header #logo:hover:before {
-        width: 80px;
-        height: 80px;
-        opacity: 1; }
+        height: 100%;
+        width: 100%; }
+        html header #logo .bg1:before, body header #logo .bg1:before {
+          display: block;
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 272px;
+          height: 272px;
+          border-radius: 50%;
+          opacity: 0;
+          transition: all 1s ease;
+          background: transparent;
+          background: -moz-radial-gradient(center, ellipse cover, #b524ff 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+          background: -webkit-radial-gradient(center, ellipse cover, #b524ff 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+          background: radial-gradient(ellipse at center, #b524ff 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b524ff', endColorstr='#007db9e8', GradientType=1); }
+      html header #logo img:hover + .bg1:before, body header #logo img:hover + .bg1:before {
+        width: 110px;
+        height: 110px;
+        opacity: 1;
+        transition: all 1s ease;
+        background: -moz-radial-gradient(center, ellipse cover, #b524ff 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+        background: -webkit-radial-gradient(center, ellipse cover, #b524ff 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+        background: radial-gradient(ellipse at center, #b524ff 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b524ff', endColorstr='#007db9e8', GradientType=1); }
     html header .navbar, body header .navbar {
       margin-bottom: 300px;
       height: 98px; }
+      @media all and (max-width: 560px) {
+        html header .navbar, body header .navbar {
+          margin-bottom: 225px; } }
       html header .navbar .navbar-brand img, body header .navbar .navbar-brand img {
+        position: relative;
         width: 55px;
         height: 72px; }
       html header .navbar .navbar-collapse, body header .navbar .navbar-collapse {
         justify-content: flex-end; }
         html header .navbar .navbar-collapse .navbar-nav, body header .navbar .navbar-collapse .navbar-nav {
+          z-index: 2;
           min-width: 600px;
           justify-content: space-between; }
           html header .navbar .navbar-collapse .navbar-nav .nav-link, body header .navbar .navbar-collapse .navbar-nav .nav-link {
@@ -298,12 +323,22 @@ html, body {
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 45px; }
+        @media all and (max-width: 560px) {
+          html header .text-inner h1, body header .text-inner h1 {
+            font-size: 2rem;
+            margin-bottom: 30px; } }
       html header .text-inner p, body header .text-inner p {
         color: #ffffff;
-        font: italic normal  1.9rem 'PT Sans', sans-serif;
+        font: italic normal 1.9rem 'PT Sans', sans-serif;
         text-align: center; }
+        @media all and (max-width: 560px) {
+          html header .text-inner p, body header .text-inner p {
+            font-size: 1.2rem; } }
   html #about, body #about {
     padding: 125px 30px 0; }
+    @media all and (max-width: 560px) {
+      html #about, body #about {
+        padding: 125px 0 0; } }
     html #about .present-block, body #about .present-block {
       margin: 0 auto 120px;
       display: flex;
@@ -321,15 +356,15 @@ html, body {
         box-sizing: border-box; }
         html #about .present-block .right-block p, body #about .present-block .right-block p {
           margin-bottom: 35px;
-          font: normal  1.25rem 'PT Sans', sans-serif; }
+          font: normal 1.25rem 'PT Sans', sans-serif; }
           html #about .present-block .right-block p .s-b, body #about .present-block .right-block p .s-b {
-            font: bold  1.25rem 'PT Sans', sans-serif; }
+            font: bold 1.25rem 'PT Sans', sans-serif; }
           html #about .present-block .right-block p .s-i, body #about .present-block .right-block p .s-i {
-            font: italic normal  1.25rem 'PT Sans', sans-serif; }
+            font: italic normal 1.25rem 'PT Sans', sans-serif; }
           html #about .present-block .right-block p:last-of-type, body #about .present-block .right-block p:last-of-type {
             margin-bottom: 95px; }
         html #about .present-block .right-block .btn-1, body #about .present-block .right-block .btn-1 {
-          font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
+          font: italic normal 1.25rem/50px 'PT Sans', sans-serif;
           text-align: center;
           color: black;
           border: solid 1px black;
@@ -376,6 +411,9 @@ html, body {
         width: 390px;
         height: 400px;
         box-sizing: border-box; }
+        @media all and (max-width: 560px) {
+          html #about .content-block .rectangle, body #about .content-block .rectangle {
+            width: 100vw; } }
         html #about .content-block .rectangle-front, body #about .content-block .rectangle-front {
           width: 100%;
           height: 100%;
@@ -395,11 +433,11 @@ html, body {
           background: #b4b2d6;
           position: absolute; }
           html #about .content-block .rectangle-back .text-inner, html #about .content-block .rectangle-down .text-inner, body #about .content-block .rectangle-back .text-inner, body #about .content-block .rectangle-down .text-inner {
-            font: italic normal  1.25rem 'PT Sans', sans-serif;
+            font: italic normal 1.25rem 'PT Sans', sans-serif;
             color: white;
             margin-bottom: 30px; }
           html #about .content-block .rectangle-back .btn2, html #about .content-block .rectangle-down .btn2, body #about .content-block .rectangle-back .btn2, body #about .content-block .rectangle-down .btn2 {
-            font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
+            font: italic normal 1.25rem/50px 'PT Sans', sans-serif;
             text-align: center;
             color: white;
             border: solid 1px white;
@@ -430,12 +468,12 @@ html, body {
           display: block;
           margin: 0 auto 30px; }
         html #about .content-block .rectangle h3, body #about .content-block .rectangle h3 {
-          font: bold  1.5rem 'PT Sans', sans-serif;
+          font: bold 1.5rem 'PT Sans', sans-serif;
           text-transform: uppercase;
           text-align: center;
           margin-bottom: 20px; }
         html #about .content-block .rectangle p, body #about .content-block .rectangle p {
-          font: italic normal  1.25rem 'PT Sans', sans-serif;
+          font: italic normal 1.25rem 'PT Sans', sans-serif;
           text-align: center; }
         html #about .content-block .rectangle--height2, body #about .content-block .rectangle--height2 {
           height: 800px; }
@@ -465,7 +503,7 @@ html, body {
           html #about .content-block .rectangle_2 p, body #about .content-block .rectangle_2 p {
             color: white; }
             html #about .content-block .rectangle_2 p span, body #about .content-block .rectangle_2 p span {
-              font: bold  1.25rem 'PT Sans', sans-serif;
+              font: bold 1.25rem 'PT Sans', sans-serif;
               text-align: center; }
         @media all and (max-width: 1245px) {
           html #about .content-block .rectangle.s1 .rectangle-front, body #about .content-block .rectangle.s1 .rectangle-front {
@@ -491,6 +529,11 @@ html, body {
           border-radius: 50%;
           margin: 6px;
           background: transparent; }
+          @media all and (max-width: 855px) {
+            html #recent .container .carousel-indicators li, body #recent .container .carousel-indicators li {
+              width: 10px;
+              height: 10px;
+              margin: 16px; } }
           html #recent .container .carousel-indicators li.active, body #recent .container .carousel-indicators li.active {
             background: #ebebeb; }
       html #recent .container .carousel-control-prev, html #recent .container .carousel-control-next, body #recent .container .carousel-control-prev, body #recent .container .carousel-control-next {
@@ -523,7 +566,7 @@ html, body {
           height: 38px;
           background: url("../img/next.svg"); }
     html #recent .btn3, body #recent .btn3 {
-      font: italic normal  1.25rem/50px 'PT Sans', sans-serif;
+      font: italic normal 1.25rem/50px 'PT Sans', sans-serif;
       text-align: center;
       color: white;
       border: solid 1px white;
@@ -567,7 +610,7 @@ html, body {
           text-align: center;
           margin-bottom: 35px; }
         html #team .card-item .text_block .position, body #team .card-item .text_block .position {
-          font: italic normal  1.5rem 'PT Sans', sans-serif;
+          font: italic normal 1.5rem 'PT Sans', sans-serif;
           text-align: center; }
       html #team .card-item .social_links, body #team .card-item .social_links {
         background: #9f9acf;
@@ -651,23 +694,25 @@ html, body {
         height: 100%; }
         html #get-in-touch .slide-info .info span, body #get-in-touch .slide-info .info span {
           margin: auto;
-          font: normal  1.15rem 'PT Sans', sans-serif;
+          font: normal 1.15rem 'PT Sans', sans-serif;
           text-align: center; }
       html #get-in-touch .slide-info.slide-home, body #get-in-touch .slide-info.slide-home {
         top: 220px; }
       html #get-in-touch .slide-info.slide-phone, body #get-in-touch .slide-info.slide-phone {
         top: 310px; }
     html #get-in-touch .home-link, body #get-in-touch .home-link {
-      position: absolute;
+      position: fixed;
       bottom: 30px;
       right: 30px;
       width: 90px;
       height: 90px;
-      display: flex;
-      background: rgba(159, 154, 207, 0.3);
+      background: rgba(159, 154, 207, 0.5);
       cursor: pointer;
       z-index: 3;
+      display: none;
       transition: background 0.4s ease; }
+      html #get-in-touch .home-link.active, body #get-in-touch .home-link.active {
+        display: flex; }
       @media all and (max-width: 576px) {
         html #get-in-touch .home-link, body #get-in-touch .home-link {
           top: 30px; } }
@@ -711,26 +756,26 @@ html, body {
           box-sizing: border-box;
           background: rgba(255, 255, 255, 0.5);
           border-radius: 3px;
-          font: italic normal  1.1rem 'PT Sans', sans-serif;
+          font: italic normal 1.1rem 'PT Sans', sans-serif;
           line-height: 56px;
           outline: none;
           border: none;
           transition: background 0.4s ease;
           padding: 0 27px; }
           html #get-in-touch .front-layer #form-get #get-email::-webkit-input-placeholder, html #get-in-touch .front-layer #form-get #get-name::-webkit-input-placeholder, html #get-in-touch .front-layer #form-get #get-massage::-webkit-input-placeholder, body #get-in-touch .front-layer #form-get #get-email::-webkit-input-placeholder, body #get-in-touch .front-layer #form-get #get-name::-webkit-input-placeholder, body #get-in-touch .front-layer #form-get #get-massage::-webkit-input-placeholder {
-            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white; }
           html #get-in-touch .front-layer #form-get #get-email::-moz-placeholder, html #get-in-touch .front-layer #form-get #get-name::-moz-placeholder, html #get-in-touch .front-layer #form-get #get-massage::-moz-placeholder, body #get-in-touch .front-layer #form-get #get-email::-moz-placeholder, body #get-in-touch .front-layer #form-get #get-name::-moz-placeholder, body #get-in-touch .front-layer #form-get #get-massage::-moz-placeholder {
-            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white; }
           html #get-in-touch .front-layer #form-get #get-email:-moz-placeholder, html #get-in-touch .front-layer #form-get #get-name:-moz-placeholder, html #get-in-touch .front-layer #form-get #get-massage:-moz-placeholder, body #get-in-touch .front-layer #form-get #get-email:-moz-placeholder, body #get-in-touch .front-layer #form-get #get-name:-moz-placeholder, body #get-in-touch .front-layer #form-get #get-massage:-moz-placeholder {
-            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white; }
           html #get-in-touch .front-layer #form-get #get-email:-ms-input-placeholder, html #get-in-touch .front-layer #form-get #get-name:-ms-input-placeholder, html #get-in-touch .front-layer #form-get #get-massage:-ms-input-placeholder, body #get-in-touch .front-layer #form-get #get-email:-ms-input-placeholder, body #get-in-touch .front-layer #form-get #get-name:-ms-input-placeholder, body #get-in-touch .front-layer #form-get #get-massage:-ms-input-placeholder {
-            font: italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white; }
           html #get-in-touch .front-layer #form-get #get-email:focus, html #get-in-touch .front-layer #form-get #get-name:focus, html #get-in-touch .front-layer #form-get #get-massage:focus, body #get-in-touch .front-layer #form-get #get-email:focus, body #get-in-touch .front-layer #form-get #get-name:focus, body #get-in-touch .front-layer #form-get #get-massage:focus {
@@ -773,7 +818,7 @@ html, body {
       html .footer, body .footer {
         flex-direction: column; } }
     html .footer .text-block, body .footer .text-block {
-      font: normal  1.1rem 'PT Sans', sans-serif;
+      font: normal 1.1rem 'PT Sans', sans-serif;
       color: white; }
       html .footer .text-block span, body .footer .text-block span {
         font-weight: bold; }

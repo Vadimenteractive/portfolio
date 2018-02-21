@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
+
 @font-face {
   font-family: 'Proxima Nova Rg';
   src: url('../fonts/ProximaNova-Bold.eot');
@@ -9,13 +10,14 @@
   font-weight: bold;
   font-style: normal;
 }
+
 @import "../slick/slick";
 @import "../slick/slick-theme";
 
 //font-family: 'PT Sans', sans-serif;
 
-@mixin btn ($color) {
-  font:italic normal  1.25rem/50px 'PT Sans', sans-serif;
+@mixin btn($color) {
+  font: italic normal 1.25rem/50px 'PT Sans', sans-serif;
   text-align: center;
   color: $color;
   border: solid 1px $color;
@@ -35,11 +37,10 @@
   }
 }
 
-html, body{
+html, body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-
   .name-block {
     img {
       display: block;
@@ -61,32 +62,59 @@ html, body{
     min-height: 100vh;
     #logo {
       position: relative;
-      &:before {
-        display: block;
-        content: '';
+      img {
+        z-index: 1;
+      }
+      .bg1 {
         position: absolute;
+        display: block;
+        top: 0;
         right: 0;
         left: 0;
-        top: 0;
         bottom: 0;
         margin: auto;
-        width: 30px;
-        height: 30px;
-        border: solid 1px #f6f6f6;
-        border-radius: 50%;
-        opacity: 0;
+        height: 100%;
+        width: 100%;
+        &:before {
+          display: block;
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 272px;
+          height: 272px;
+          //border: solid 1px #f6f6f6;
+          border-radius: 50%;
+          opacity: 0;
+          transition: all 1s ease;
+          background: transparent;
+          background: -moz-radial-gradient(center, ellipse cover, rgba(181, 36, 255, 1) 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+          background: -webkit-radial-gradient(center, ellipse cover, rgba(181, 36, 255, 1) 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+          background: radial-gradient(ellipse at center, rgba(181, 36, 255, 1) 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b524ff', endColorstr='#007db9e8', GradientType=1);
+        }
       }
-      &:hover:before {
-        width: 80px;
-        height: 80px;
+      img:hover + .bg1:before {
+        width: 110px;
+        height: 110px;
         opacity: 1;
+        transition: all 1s ease;
+        background: -moz-radial-gradient(center, ellipse cover, rgba(181, 36, 255, 1) 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(181, 36, 255, 1) 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+        background: radial-gradient(ellipse at center, rgba(181, 36, 255, 1) 0%, rgba(127, 179, 233, 0) 70%, rgba(126, 183, 232, 0) 72%, rgba(125, 185, 232, 0) 73%, rgba(125, 185, 232, 0) 74%, rgba(125, 185, 232, 0) 75%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b524ff', endColorstr='#007db9e8', GradientType=1);
       }
     }
     .navbar {
       margin-bottom: 300px;
       height: 98px;
+      @media all and (max-width: 560px) {
+        margin-bottom: 225px;
+      }
       .navbar-brand {
-        img{
+        img {
+          position: relative;
           width: 55px;
           height: 72px;
         }
@@ -94,6 +122,7 @@ html, body{
       .navbar-collapse {
         justify-content: flex-end;
         .navbar-nav {
+          z-index: 2;
           min-width: 600px;
           justify-content: space-between;
           .nav-link {
@@ -120,7 +149,7 @@ html, body{
               &:before {
                 top: 0px;
               }
-              &:hover{
+              &:hover {
                 &:before {
                   transition: all 0.6s ease;
                   opacity: 1;
@@ -147,17 +176,27 @@ html, body{
         text-transform: uppercase;
         text-align: center;
         margin-bottom: 45px;
+        @media all and (max-width: 560px) {
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
       }
       p {
         color: #ffffff;
-        font:italic normal  1.9rem 'PT Sans', sans-serif;
+        font: italic normal 1.9rem 'PT Sans', sans-serif;
         text-align: center;
+        @media all and (max-width: 560px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }
 
   #about {
     padding: 125px 30px 0;
+    @media all and (max-width: 560px) {
+      padding: 125px 0 0;
+    }
     .present-block {
       margin: 0 auto 120px;
       display: flex;
@@ -176,12 +215,12 @@ html, body{
         box-sizing: border-box;
         p {
           margin-bottom: 35px;
-          font:normal  1.25rem 'PT Sans', sans-serif;
+          font: normal 1.25rem 'PT Sans', sans-serif;
           .s-b {
-            font:bold  1.25rem 'PT Sans', sans-serif;
+            font: bold 1.25rem 'PT Sans', sans-serif;
           }
           .s-i {
-            font:italic normal  1.25rem 'PT Sans', sans-serif;
+            font: italic normal 1.25rem 'PT Sans', sans-serif;
           }
           &:last-of-type {
             margin-bottom: 95px;
@@ -226,6 +265,9 @@ html, body{
         width: 390px;
         height: 400px;
         box-sizing: border-box;
+        @media all and (max-width: 560px) {
+          width: 100vw;
+        }
         &-front {
           width: 100%;
           height: 100%;
@@ -247,12 +289,12 @@ html, body{
           background: #b4b2d6;
           position: absolute;
           .text-inner {
-            font:italic normal  1.25rem 'PT Sans', sans-serif;
+            font: italic normal 1.25rem 'PT Sans', sans-serif;
             color: white;
             margin-bottom: 30px;
           }
           .btn2 {
-            font:italic normal  1.25rem/50px 'PT Sans', sans-serif;
+            font: italic normal 1.25rem/50px 'PT Sans', sans-serif;
             text-align: center;
             color: white;
             border: solid 1px white;
@@ -263,7 +305,7 @@ html, body{
             margin: 0 auto;
             text-decoration: none;
             cursor: pointer;
-            transition:background 0.4s ease;
+            transition: background 0.4s ease;
             &:hover {
               background: #9f9acf;
               transition: background 0.4s ease;
@@ -272,18 +314,17 @@ html, body{
         }
         &:hover {
           z-index: 4;
-          & .rectangle-front{
+          & .rectangle-front {
             transform: rotateY(180deg);
             transition: transform .4s ease;
           }
-          & .rectangle-back
-          {
+          & .rectangle-back {
             transform: rotateY(0deg);
             transition: transform .4s ease;
           }
         }
         &_1g {
-          .rectangle-front{
+          .rectangle-front {
             background: #dbdbdb;
           }
           .rectangle-back {
@@ -295,22 +336,22 @@ html, body{
           margin: 0 auto 30px;
         }
         h3 {
-          font:bold  1.5rem 'PT Sans', sans-serif;
+          font: bold 1.5rem 'PT Sans', sans-serif;
           text-transform: uppercase;
           text-align: center;
           margin-bottom: 20px;
         }
         p {
-          font:italic normal  1.25rem 'PT Sans', sans-serif;
+          font: italic normal 1.25rem 'PT Sans', sans-serif;
           text-align: center;
         }
-        &--height2{
+        &--height2 {
           height: 800px;
         }
         //
         &_2 {
           overflow: hidden;
-          .rectangle-up{
+          .rectangle-up {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -323,9 +364,9 @@ html, body{
           .rectangle-down {
             transition: all .6s ease;
             right: -390px;
-            }
+          }
           &:hover {
-            .rectangle-up, .rectangle-down{
+            .rectangle-up, .rectangle-down {
               transition: all .6s ease;
               margin-right: 390px;
             }
@@ -340,19 +381,19 @@ html, body{
           p {
             color: white;
             span {
-              font:bold  1.25rem 'PT Sans', sans-serif;
+              font: bold 1.25rem 'PT Sans', sans-serif;
               text-align: center;
             }
           }
         }
         @media all and (max-width: 1245px) {
           &.s1 {
-            .rectangle-front{
+            .rectangle-front {
               background: #dbdbdb;
             }
           }
           &.s2 {
-            .rectangle-front{
+            .rectangle-front {
               background: white;
             }
           }
@@ -380,6 +421,11 @@ html, body{
           border-radius: 50%;
           margin: 6px;
           background: transparent;
+          @media all and (max-width: 855px) {
+            width: 10px;
+            height: 10px;
+            margin: 16px;
+          }
           &.active {
             background: #ebebeb;
           }
@@ -458,7 +504,7 @@ html, body{
           margin-bottom: 35px;
         }
         .position {
-          font:italic normal  1.5rem 'PT Sans', sans-serif;
+          font: italic normal 1.5rem 'PT Sans', sans-serif;
           text-align: center;
         }
       }
@@ -561,7 +607,7 @@ html, body{
         height: 100%;
         & span {
           margin: auto;
-          font:normal  1.15rem 'PT Sans', sans-serif;
+          font: normal 1.15rem 'PT Sans', sans-serif;
           text-align: center;
         }
       }
@@ -573,28 +619,31 @@ html, body{
       }
     }
     .home-link {
-      position: absolute;
+      position: fixed;
       bottom: 30px;
       right: 30px;
       width: 90px;
       height: 90px;
-      display: flex;
-      background: rgba(159, 154, 207, 0.3);
+      background: rgba(159, 154, 207, 0.5);
       cursor: pointer;
       z-index: 3;
-      transition:background 0.4s ease;
+      display: none;
+      transition: background 0.4s ease;
+      &.active {
+        display: flex;
+      }
       @media all and (max-width: 576px) {
         top: 30px;
       }
       &:hover {
         background: #9f9acf;
-        transition:background 0.4s ease;
+        transition: background 0.4s ease;
       }
       img {
         margin: auto;
       }
     }
-    .front-layer  {
+    .front-layer {
       z-index: 2;
       position: absolute;
       background: rgba(159, 154, 207, 0.3);
@@ -633,29 +682,29 @@ html, body{
           box-sizing: border-box;
           background: rgba(255, 255, 255, 0.5);
           border-radius: 3px;
-          font:italic normal  1.1rem 'PT Sans', sans-serif;
+          font: italic normal 1.1rem 'PT Sans', sans-serif;
           line-height: 56px;
           outline: none;
           border: none;
-          transition:background 0.4s ease;
+          transition: background 0.4s ease;
           padding: 0 27px;
           &::-webkit-input-placeholder {
-            font:italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white;
           }
           &::-moz-placeholder {
-            font:italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white;
           }
           &:-moz-placeholder {
-            font:italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white;
           }
           &:-ms-input-placeholder {
-            font:italic normal  1.1rem 'PT Sans', sans-serif;
+            font: italic normal 1.1rem 'PT Sans', sans-serif;
             line-height: 56px;
             color: white;
           }
@@ -674,7 +723,7 @@ html, body{
           border: none;
           background: #9f9acf;
           border-radius: 3px;
-          box-shadow:  0px 4px 5px 0px #8783b0;
+          box-shadow: 0px 4px 5px 0px #8783b0;
           cursor: pointer;
           transition: all 0.4s ease;
           color: white;
@@ -682,7 +731,7 @@ html, body{
           text-align: center;
           line-height: 70px;
           &:hover {
-            box-shadow:  0px 10px 5px 0px #8783b0;
+            box-shadow: 0px 10px 5px 0px #8783b0;
             transform: translate(-2px, -6px);
             transition: all 0.4s ease;
           }
@@ -697,7 +746,7 @@ html, body{
       width: 100vw;
     }
   }
-  
+
   .footer {
     background: #9f9acf;
     min-height: 185px;
@@ -709,7 +758,7 @@ html, body{
       flex-direction: column;
     }
     .text-block {
-      font:normal  1.1rem 'PT Sans', sans-serif;
+      font: normal 1.1rem 'PT Sans', sans-serif;
       color: white;
       span {
         font-weight: bold;

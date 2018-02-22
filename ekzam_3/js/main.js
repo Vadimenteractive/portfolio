@@ -24,7 +24,7 @@
                 {
                     breakpoint: 640,
                     settings: {
-                        centerMode: true,
+                        //centerMode: true,
                         slidesToShow: 1
                     }
                 }

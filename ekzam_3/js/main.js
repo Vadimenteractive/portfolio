@@ -8,7 +8,7 @@
             interval: 5000
         });
         $('.slide-contein').slick({
-            //autoplay: true,
+            autoplay: true,
             autoplaySpeed: 2000,
             infinity: true,
             dots: false,

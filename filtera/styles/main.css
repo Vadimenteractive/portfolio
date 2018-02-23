@@ -410,6 +410,12 @@ body {
         body #callback .content-box .text-box #call_2:hover > .submit-phone, body #callback .content-box .text-box #call_2.active > .submit-phone {
           width: 50%;
           transition: all .4s ease; }
+      @media handheld {
+        body #callback .content-box .text-box #call_2 {
+          width: 100%;
+          height: 128px; }
+          body #callback .content-box .text-box #call_2 .phone, body #callback .content-box .text-box #call_2 .submit-phone {
+            width: 100% !important; } }
   body #advantage {
     background: url("../img/bg5.jpg") no-repeat;
     background-size: cover;

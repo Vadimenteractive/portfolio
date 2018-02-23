@@ -526,7 +526,13 @@ body {
               transition: all .4s ease;
             }
           }
-
+          @media handheld {
+            width: 100%;
+            height: 128px;
+            .phone, .submit-phone {
+              width: 100% !important;
+            }
+          }
         }
       }
     }

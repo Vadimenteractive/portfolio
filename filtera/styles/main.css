@@ -1,0 +1,555 @@
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/geometria/Geometria.eot");
+  src: local("Geometria"), url("../fonts/geometria/Geometria.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria.woff") format("woff"), url("../fonts/geometria/Geometria.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/geometria/Geometria-Bold.eot");
+  src: local("Geometria Bold"), local("Geometria-Bold"), url("../fonts/geometria/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria-Bold.woff") format("woff"), url("../fonts/geometria/Geometria-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/geometria/Geometria-ExtraBold.eot");
+  src: local("Geometria ExtraBold"), local("Geometria-ExtraBold"), url("../fonts/geometria/Geometria-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria-ExtraBold.woff") format("woff"), url("../fonts/geometria/Geometria-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/geometria/Geometria-Light.eot");
+  src: local("Geometria Light"), local("Geometria-Light"), url("../fonts/geometria/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/Geometria-Light.woff") format("woff"), url("../fonts/geometria/Geometria-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+  body #navigate {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    body #navigate h5 {
+      font: bold 1.2rem 'Geometria', sans-serif;
+      display: inline-block;
+      margin: 0; }
+    body #navigate ul {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      right: 0; }
+      body #navigate ul.scroll {
+        z-index: 3;
+        clear: both;
+        display: none;
+        width: 250px;
+        position: fixed;
+        top: 100px;
+        right: 0; }
+        body #navigate ul.scroll li {
+          color: white;
+          display: block;
+          right: -100%; }
+          body #navigate ul.scroll li a {
+            height: 36px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-right: none;
+            border-radius: 18px 0 0 18px;
+            line-height: 32px;
+            color: white;
+            background: linear-gradient(to right, #37a8ff, #4747ff);
+            display: block;
+            margin: 10px 0;
+            text-align: center; }
+      body #navigate ul li {
+        display: inline-block;
+        position: relative;
+        transition: all .2s ease; }
+        body #navigate ul li[data-class="open-li"] {
+          right: 0;
+          transition: all .2s ease; }
+        body #navigate ul li a {
+          text-decoration: none;
+          color: black;
+          font: normal 1em 'Geometria', sans-serif;
+          margin: 10px;
+          display: inline-block; }
+      body #navigate ul.menu-opened + .hamburger .hamburger-center-line {
+        display: none; }
+      body #navigate ul.menu-opened + .hamburger:before, body #navigate ul.menu-opened + .hamburger:after {
+        width: 129%; }
+      body #navigate ul.menu-opened + .hamburger:before {
+        transform: rotate(45deg);
+        transform-origin: 0 0; }
+      body #navigate ul.menu-opened + .hamburger:after {
+        transform: rotate(-45deg);
+        transform-origin: 0 100%; }
+      @media all and (max-width: 1199px) {
+        body #navigate ul {
+          clear: both;
+          display: none;
+          width: 250px;
+          position: absolute;
+          top: 100px;
+          right: 0; }
+          body #navigate ul li {
+            color: white;
+            display: block;
+            right: -100%; }
+            body #navigate ul li a {
+              height: 36px;
+              box-sizing: border-box;
+              border: 2px solid white;
+              border-right: none;
+              border-radius: 18px 0 0 18px;
+              line-height: 32px;
+              color: white;
+              background: linear-gradient(to right, #37a8ff, #4747ff);
+              display: block;
+              margin: 10px 0;
+              text-align: center; } }
+      @media all and (min-width: 1200px) {
+        body #navigate ul.normal {
+          display: inline-block !important; }
+          body #navigate ul.normal li {
+            right: 0 !important; } }
+    body #navigate .hamburger {
+      z-index: 3;
+      position: relative;
+      margin: 35px;
+      height: 30px;
+      width: 30px;
+      float: right;
+      cursor: pointer; }
+      body #navigate .hamburger .hamburger-center-line {
+        height: 4px;
+        width: 100%;
+        background: #333333;
+        position: absolute;
+        top: 50%;
+        margin-top: -2px; }
+      body #navigate .hamburger:before, body #navigate .hamburger:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: #333333;
+        transition: all .2s linear; }
+      body #navigate .hamburger:before {
+        top: 0; }
+      body #navigate .hamburger:after {
+        bottom: 0; }
+      @media all and (min-width: 1200px) {
+        body #navigate .hamburger {
+          display: none; } }
+      body #navigate .hamburger.active {
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0px; }
+    @media all and (max-width: 1199px) {
+      body #navigate {
+        display: block; }
+        body #navigate h5 {
+          vertical-align: middle;
+          position: relative;
+          top: 50%;
+          left: 2rem;
+          transform: translateY(-50%); } }
+  body #about_us {
+    background: url("../img/bg1.jpg") center top;
+    background-size: cover;
+    min-height: 771px;
+    display: flex; }
+    body #about_us .text_inner {
+      margin: auto;
+      color: white;
+      text-align: center;
+      max-width: 900px;
+      padding: 30px 0; }
+      body #about_us .text_inner h1 {
+        font: 800 2.1rem 'Geometria', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 60px; }
+      body #about_us .text_inner p {
+        font: 300 1rem 'Geometria', sans-serif;
+        margin-bottom: 70px; }
+      body #about_us .text_inner a {
+        font: normal 1rem 'Geometria', sans-serif;
+        color: white;
+        display: inline-block;
+        margin: 0 auto;
+        background: #e2225e;
+        box-sizing: border-box;
+        line-height: 60px;
+        height: 60px;
+        padding: 0 70px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.6s ease; }
+        body #about_us .text_inner a:hover {
+          font-size: 1.5rem;
+          letter-spacing: 3px;
+          transition: all 0.6s ease;
+          padding: 0 170px; }
+  body #analyse {
+    min-height: 800px;
+    background: url("../img/bg2.jpg") no-repeat;
+    background-size: cover;
+    display: flex; }
+    body #analyse .content-box {
+      width: 1170px;
+      margin: auto;
+      background: url("../img/Layer-1.png") no-repeat left center;
+      min-height: 610px; }
+      body #analyse .content-box .content-inner {
+        float: right;
+        max-width: 572px; }
+        body #analyse .content-box .content-inner h2 {
+          font: bold 1.56rem 'Geometria', sans-serif;
+          text-align: left;
+          margin-bottom: 46px; }
+        body #analyse .content-box .content-inner .submit-card {
+          background: white;
+          border-radius: 30px;
+          padding: 70px;
+          text-align: center;
+          box-shadow: 0 10px 30px 0 #2e77cc; }
+          body #analyse .content-box .content-inner .submit-card h2 {
+            font: 800 1.56rem 'Geometria', sans-serif;
+            margin-bottom: 30px;
+            text-align: center; }
+          body #analyse .content-box .content-inner .submit-card p {
+            font: normal 1rem 'Geometria', sans-serif;
+            margin-bottom: 60px; }
+          body #analyse .content-box .content-inner .submit-card #call .phone, body #analyse .content-box .content-inner .submit-card #call .submit-phone {
+            outline: none;
+            border: none;
+            margin: 0 auto;
+            width: 390px;
+            height: 74px;
+            border-radius: 37px;
+            padding: 0 37px;
+            display: block;
+            box-sizing: border-box; }
+          body #analyse .content-box .content-inner .submit-card #call .phone {
+            background: #efefef;
+            margin-bottom: 26px;
+            /* Firefox 19+ */
+            /* Firefox 18- */ }
+            body #analyse .content-box .content-inner .submit-card #call .phone::-webkit-input-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 74px;
+              color: #919191; }
+            body #analyse .content-box .content-inner .submit-card #call .phone::-moz-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 74px;
+              color: #919191; }
+            body #analyse .content-box .content-inner .submit-card #call .phone:-moz-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 74px;
+              color: #919191; }
+            body #analyse .content-box .content-inner .submit-card #call .phone:-ms-input-placeholder {
+              font: normal 1.2rem 'Geometria', sans-serif;
+              line-height: 74px;
+              color: #919191; }
+          body #analyse .content-box .content-inner .submit-card #call .submit-phone {
+            cursor: pointer;
+            background: #fb2468;
+            font: bold 1.1rem 'Geometria', sans-serif;
+            letter-spacing: 2px;
+            color: white; }
+  body #catalog {
+    background: url("../img/bg3.jpg") no-repeat;
+    background-size: cover; }
+    body #catalog .content-box {
+      padding-top: 100px;
+      padding-bottom: 100px; }
+      body #catalog .content-box .text-box {
+        margin-bottom: 30px; }
+        body #catalog .content-box .text-box h3 {
+          font: bold 2.1rem 'Geometria', sans-serif;
+          text-align: center;
+          color: #2e77cc;
+          letter-spacing: 7px;
+          margin-bottom: 30px; }
+        body #catalog .content-box .text-box p {
+          font: 300 1rem 'Geometria', sans-serif; }
+      body #catalog .content-box .items-box .item-block {
+        box-sizing: border-box;
+        height: 100%;
+        background: white;
+        padding: 2rem;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        box-shadow: 0 5px 15px 0 #2e77cc; }
+        body #catalog .content-box .items-box .item-block p {
+          font: normal 1.2rem 'Geometria', sans-serif;
+          text-align: center; }
+        body #catalog .content-box .items-box .item-block h5 {
+          font: bold 1.1rem 'Geometria', sans-serif;
+          text-align: center; }
+        body #catalog .content-box .items-box .item-block img {
+          display: block;
+          margin: 0 auto; }
+        body #catalog .content-box .items-box .item-block a {
+          display: block;
+          box-sizing: border-box;
+          padding: 10px 0;
+          height: 44px;
+          border-radius: 22px;
+          background: linear-gradient(to right, #37a8ff, #4747ff);
+          font: normal 1rem 'Geometria', sans-serif;
+          text-decoration: none;
+          cursor: pointer;
+          color: white;
+          text-align: center;
+          transition: all 0.4s ease; }
+          body #catalog .content-box .items-box .item-block a:hover {
+            transition: all 0.4s ease;
+            letter-spacing: 2px;
+            font-size: 1.1rem; }
+  body #callback {
+    background: url("../img/bg4-2.jpg") no-repeat;
+    background-size: cover;
+    padding: 120px 0; }
+    body #callback .content-box .text-box h2 {
+      font: bold 2.2rem 'Geometria', sans-serif;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px; }
+    body #callback .content-box .text-box p {
+      font: normal 1.22rem 'Geometria', sans-serif;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px; }
+    body #callback .content-box .text-box #call_2 {
+      margin: 0 auto;
+      box-sizing: border-box;
+      background: #ffffff;
+      height: 68px;
+      border: solid 4px #ffffff;
+      border-radius: 34px;
+      width: 50%;
+      transition: all .4s ease; }
+      body #callback .content-box .text-box #call_2 .phone, body #callback .content-box .text-box #call_2 .submit-phone {
+        outline: none;
+        border: none;
+        margin: 0 auto;
+        height: 60px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+      body #callback .content-box .text-box #call_2 .phone {
+        background: transparent;
+        width: 0;
+        padding-left: 0px;
+        border-radius: 30px;
+        transition: all .4s ease;
+        float: left;
+        /* Firefox 19+ */
+        /* Firefox 18- */ }
+        body #callback .content-box .text-box #call_2 .phone::-webkit-input-placeholder {
+          font: normal 1.2rem 'Geometria', sans-serif;
+          line-height: 60px;
+          color: #919191; }
+        body #callback .content-box .text-box #call_2 .phone::-moz-placeholder {
+          font: normal 1.2rem 'Geometria', sans-serif;
+          line-height: 60px;
+          color: #919191; }
+        body #callback .content-box .text-box #call_2 .phone:-moz-placeholder {
+          font: normal 1.2rem 'Geometria', sans-serif;
+          line-height: 60px;
+          color: #919191; }
+        body #callback .content-box .text-box #call_2 .phone:-ms-input-placeholder {
+          font: normal 1.2rem 'Geometria', sans-serif;
+          line-height: 60px;
+          color: #919191; }
+      body #callback .content-box .text-box #call_2 .submit-phone {
+        width: 100%;
+        border-radius: 30px;
+        cursor: pointer;
+        background: #fb2468;
+        font: bold 1.1rem 'Geometria', sans-serif;
+        letter-spacing: 2px;
+        color: white;
+        padding: 0 30px;
+        transition: all .4s ease; }
+      body #callback .content-box .text-box #call_2:hover, body #callback .content-box .text-box #call_2.active {
+        width: 100%;
+        transition: all .4s ease; }
+        body #callback .content-box .text-box #call_2:hover > .phone, body #callback .content-box .text-box #call_2.active > .phone {
+          width: 50%;
+          padding-left: 30px;
+          transition: all .4s ease; }
+        body #callback .content-box .text-box #call_2:hover > .submit-phone, body #callback .content-box .text-box #call_2.active > .submit-phone {
+          width: 50%;
+          transition: all .4s ease; }
+  body #advantage {
+    background: url("../img/bg5.jpg") no-repeat;
+    background-size: cover;
+    padding: 120px 0; }
+    body #advantage .text-box {
+      margin-bottom: 100px; }
+      body #advantage .text-box h2 {
+        font: bold 2.2rem 'Geometria', sans-serif;
+        color: #2e77cc;
+        text-align: center;
+        margin-bottom: 50px; }
+      body #advantage .text-box p {
+        font: normal 1.22rem 'Geometria', sans-serif;
+        text-align: center; }
+    body #advantage .advantage-container .item-block {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 2rem; }
+      body #advantage .advantage-container .item-block .round {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        margin: 0 auto 55px;
+        background: linear-gradient(to right, #37a8ff, #4747ff);
+        display: flex;
+        box-shadow: 0 3px 15px 0 #2e77cc;
+        transition: all .4s ease; }
+        body #advantage .advantage-container .item-block .round:hover {
+          transform: translate(-7px, -9px);
+          box-shadow: 0 12px 15px 0 #2e77cc;
+          transition: all .4s ease; }
+        body #advantage .advantage-container .item-block .round img {
+          margin: auto; }
+      body #advantage .advantage-container .item-block h5 {
+        font: bold 1.12rem 'Geometria', sans-serif;
+        text-align: center;
+        margin-bottom: 40px; }
+      body #advantage .advantage-container .item-block p {
+        font: 300 1rem 'Geometria', sans-serif;
+        text-align: center; }
+  body #video-comment {
+    padding: 120px 0; }
+    body #video-comment .text-box {
+      margin-bottom: 100px; }
+      body #video-comment .text-box h2 {
+        font: bold 2.2rem 'Geometria', sans-serif;
+        color: #2e77cc;
+        text-align: center;
+        margin-bottom: 50px;
+        letter-spacing: 8px;
+        text-transform: uppercase; }
+      body #video-comment .text-box p {
+        font: normal 1.22rem 'Geometria', sans-serif;
+        text-align: center; }
+    body #video-comment .video-screen {
+      display: flex; }
+      body #video-comment .video-screen a {
+        margin: auto; }
+  body #service {
+    background: url("../img/bg6.jpg") no-repeat;
+    background-size: cover;
+    padding: 120px 0 120px; }
+    body #service .text-box {
+      margin-bottom: 100px; }
+      body #service .text-box h2 {
+        font: bold 2.2rem 'Geometria', sans-serif;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 8px; }
+    body #service .item-block {
+      box-sizing: border-box;
+      height: 100%;
+      background: white;
+      padding: 2rem;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      box-shadow: 0 5px 15px 0 #2e77cc; }
+      body #service .item-block p {
+        font: normal 1.2rem 'Geometria', sans-serif;
+        text-align: center; }
+      body #service .item-block h5 {
+        font: bold 1.1rem 'Geometria', sans-serif;
+        text-align: center; }
+      body #service .item-block img {
+        display: block;
+        margin: 0 auto; }
+      body #service .item-block a {
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 0;
+        height: 44px;
+        border-radius: 22px;
+        background: linear-gradient(to right, #37a8ff, #4747ff);
+        font: normal 1rem 'Geometria', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        text-align: center; }
+  body footer {
+    background: black;
+    min-height: 170px;
+    overflow: hidden; }
+    body footer .logo-block {
+      float: left;
+      width: 150px;
+      height: 100%;
+      display: flex; }
+      body footer .logo-block a {
+        margin: auto;
+        color: white;
+        text-decoration: none;
+        font: bold 1.2rem 'Geometria', sans-serif; }
+    body footer .container {
+      height: 100%; }
+      body footer .container .row {
+        height: 100%; }
+        body footer .container .row .footer-col {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-content: center;
+          align-items: center; }
+          body footer .container .row .footer-col p {
+            margin: auto; }
+          body footer .container .row .footer-col p, body footer .container .row .footer-col a {
+            color: white;
+            text-decoration: none;
+            font: normal 1.2rem 'Geometria', sans-serif; }
+  body #carouselExampleIndicators .carousel-indicators, body #carouselExampleIndicators-2 .carousel-indicators {
+    bottom: -75px; }
+    body #carouselExampleIndicators .carousel-indicators li, body #carouselExampleIndicators-2 .carousel-indicators li {
+      width: 16px;
+      height: 16px;
+      background: #bfe2ff;
+      border-radius: 8px;
+      display: block;
+      box-sizing: border-box;
+      margin: 4px 15px;
+      transition: all .8s ease; }
+      body #carouselExampleIndicators .carousel-indicators li.active, body #carouselExampleIndicators-2 .carousel-indicators li.active {
+        width: 24px;
+        height: 24px;
+        background: #2b9fff;
+        border-radius: 12px;
+        margin: 0 11px;
+        transition: all .8s ease; }
+  body .col-xl-3 {
+    padding: 1rem; }
+
+/*# sourceMappingURL=main.css.map */

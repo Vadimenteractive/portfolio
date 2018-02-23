@@ -69,6 +69,9 @@ body {
             display: block;
             margin: 10px 0;
             text-align: center; }
+            @media all and (max-width: 1129px) {
+              body #navigate ul.scroll li a {
+                font-size: 2rem; } }
       body #navigate ul li {
         display: inline-block;
         position: relative;
@@ -96,7 +99,7 @@ body {
         body #navigate ul {
           clear: both;
           display: none;
-          width: 250px;
+          width: 90vw;
           position: absolute;
           top: 100px;
           right: 0; }
@@ -111,6 +114,7 @@ body {
               border-right: none;
               border-radius: 27px 0 0 27px;
               line-height: 50px;
+              font-size: 2rem;
               color: white;
               background: linear-gradient(to right, #37a8ff, #4747ff);
               display: block;
@@ -271,7 +275,7 @@ body {
       @media all and (max-width: 1139px) {
         body #analyse .content-box {
           background: none;
-          padding: 0 10px; }
+          padding: 0; }
           body #analyse .content-box .content-inner {
             float: none;
             margin: auto; }
@@ -410,12 +414,14 @@ body {
         body #callback .content-box .text-box #call_2:hover > .submit-phone, body #callback .content-box .text-box #call_2.active > .submit-phone {
           width: 50%;
           transition: all .4s ease; }
-      @media handheld {
+      @media all and (max-width: 1129px) {
         body #callback .content-box .text-box #call_2 {
           width: 100%;
           height: 128px; }
           body #callback .content-box .text-box #call_2 .phone, body #callback .content-box .text-box #call_2 .submit-phone {
-            width: 100% !important; } }
+            width: 100% !important; }
+          body #callback .content-box .text-box #call_2 .phone {
+            padding-left: 20px !important; } }
   body #advantage {
     background: url("../img/bg5.jpg") no-repeat;
     background-size: cover;
@@ -487,6 +493,9 @@ body {
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 8px; }
+        @media all and (max-width: 1129px) {
+          body #service .text-box h2 {
+            letter-spacing: 1px; } }
     body #service .item-block {
       box-sizing: border-box;
       height: 100%;
@@ -536,12 +545,13 @@ body {
       body footer .container .row .footer-col p, body footer .container .row .footer-col a {
         color: white;
         font: normal 1.2rem 'Geometria', sans-serif; }
+      body footer .container .row .footer-col a:first-child {
+        margin-bottom: 15px; }
     body footer .container .logo-block {
-      float: left;
-      width: 150px;
       display: flex;
       justify-content: flex-start;
-      align-items: center; }
+      align-items: center;
+      margin: 20px 0; }
       body footer .container .logo-block a {
         color: white;
         text-decoration: none;

@@ -95,6 +95,9 @@ body {
             display: block;
             margin: 10px 0;
             text-align: center;
+            @media all and (max-width: 1129px) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -136,7 +139,7 @@ body {
         //float: right;
         clear: both;
         display: none;
-        width: 250px;
+        width: 90vw;
         position: absolute;
         top: 100px;
         right: 0;
@@ -151,6 +154,7 @@ body {
             border-right: none;
             border-radius: 27px 0 0 27px;
             line-height: 50px;
+            font-size: 2rem;
             color: white;
             @include background();
             display: block;
@@ -350,7 +354,7 @@ body {
       }
       @media all and  (max-width: 1139px){
         background: none;
-        padding: 0 10px;
+        padding: 0;
         .content-inner {
           float: none;
           margin: auto;
@@ -526,11 +530,14 @@ body {
               transition: all .4s ease;
             }
           }
-          @media handheld {
+          @media all and (max-width: 1129px){
             width: 100%;
             height: 128px;
             .phone, .submit-phone {
               width: 100% !important;
+            }
+            .phone {
+              padding-left: 20px !important;
             }
           }
         }
@@ -631,6 +638,9 @@ body {
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 8px;
+        @media all and (max-width: 1129px) {
+          letter-spacing: 1px;
+        }
       }
     }
     .item-block {
@@ -696,14 +706,16 @@ body {
             color: white;
             font: normal 1.2rem 'Geometria', sans-serif;
           }
+          a:first-child {
+            margin-bottom: 15px;
+          }
         }
       }
       .logo-block {
-        float: left;
-        width: 150px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin: 20px 0;
         a {
           color: white;
           text-decoration: none;

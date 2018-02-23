@@ -79,6 +79,12 @@ body {
         position: fixed;
         top: 100px;
         right: 0;
+        @media all and (max-width: 1129px) {
+          width: 90vw;
+          a {
+            font-size: 2rem;
+          }
+        }
         li {
           color: white;
           display: block;
@@ -95,9 +101,6 @@ body {
             display: block;
             margin: 10px 0;
             text-align: center;
-            @media all and (max-width: 1129px) {
-              font-size: 2rem;
-            }
           }
         }
       }
@@ -428,9 +431,8 @@ body {
             text-align: center;
             transition: all 0.4s ease;
             &:hover {
-              transition: all 0.4s ease;
-              letter-spacing: 2px;
-              font-size: 1.1rem;
+              transition: all 1s ease;
+              background: linear-gradient(to right, #4747ff, #37a8ff);
             }
           }
         }
@@ -749,6 +751,12 @@ body {
           border-radius: 12px;
           margin: 0 11px;
           transition: all .8s ease;
+        }
+        @media all and (max-width: 1139px) {
+          margin: 4px 30px;
+          &.active {
+            margin: 0 26px;
+          }
         }
       }
     }

@@ -71,6 +71,33 @@ body {
       padding: 0;
       margin: 0;
       right: 0;
+      &.scroll {
+        z-index: 3;
+        clear: both;
+        display: none;
+        width: 250px;
+        position: fixed;
+        top: 100px;
+        right: 0;
+        li {
+          color: white;
+          display: block;
+          right: -100%;
+          a {
+            height: 36px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-right: none;
+            border-radius: 18px 0 0 18px;
+            line-height: 32px;
+            color: white;
+            @include background();
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+          }
+        }
+      }
       li {
         display: inline-block;
         position: relative;
@@ -132,14 +159,18 @@ body {
           }
         }
       }
-      @media all and (min-width: 1200px) {
-        display: inline-block !important;
-        li {
-          right: 0 !important;
+      &.normal {
+        @media all and (min-width: 1200px) {
+          display: inline-block !important;
+          li {
+            right: 0 !important;
+          }
         }
       }
+
     }
     .hamburger {
+      z-index: 3;
       position: relative;
       margin: 35px;
       height: 30px;
@@ -173,6 +204,12 @@ body {
       }
       @media all and (min-width: 1200px) {
         display: none;
+      }
+      &.active {
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0px;
       }
     }
     @media all and (max-width: 1199px) {
@@ -609,6 +646,46 @@ body {
         cursor: pointer;
         color: white;
         text-align: center;
+      }
+    }
+  }
+  
+  footer {
+    background: black;
+    min-height:170px;
+    overflow: hidden;
+    .logo-block {
+      float: left;
+      width: 150px;
+      height: 100%;
+      display: flex;
+      a {
+        margin: auto;
+        color: white;
+        text-decoration: none;
+        font: bold 1.2rem 'Geometria', sans-serif;
+      }
+    }
+    .container {
+      height: 100%;
+      .row {
+        height: 100%;
+        .footer-col {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-content: center;
+          align-items: center;
+          p {
+            margin: auto;
+          }
+          p, a {
+            color: white;
+            text-decoration: none;
+            font: normal 1.2rem 'Geometria', sans-serif;
+          }
+        }
       }
     }
   }

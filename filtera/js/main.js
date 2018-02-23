@@ -102,6 +102,32 @@
         })
         $('.phone').on('blur', function () {
             $('#call_2').removeClass('active')
-        })
+        });
+
+        $(window).on('scroll', function () {
+            var scrolHeigt = $(window).scrollTop(),
+                $hamburger = $('.hamburger'),
+                $navList = $('.nav-list');
+            if (100 < scrolHeigt) {
+                $hamburger.addClass('active');
+                $navList
+                    .removeClass('normal')
+                    .addClass('scroll');
+            } else {
+                $hamburger.removeClass('active')
+                $navList
+                    .removeClass('scroll')
+                    .addClass('normal');
+            }
+        });
+
+        $(document).ready(function () {
+            $("a.navi-item").click(function () {
+                var elementClick = $(this).attr("href");
+                var destination = $(elementClick).offset().top;
+                $('html,body').animate({scrollTop: destination}, 700);
+                return false;
+            });
+        });
     })
 })(jQuery);

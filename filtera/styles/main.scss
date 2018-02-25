@@ -72,7 +72,7 @@ body {
       margin: 0;
       right: 0;
       &.scroll {
-        z-index: 3;
+        z-index: 5;
         clear: both;
         display: none;
         width: 250px;
@@ -404,6 +404,11 @@ body {
             background: none;
             box-shadow: none;
             padding: 10px;
+            #call {
+              .phone, .submit-phone {
+                width: 100%;
+              }
+            }
           }
         }
       }
@@ -680,6 +685,7 @@ body {
         letter-spacing: 8px;
         @media all and (max-width: 1129px) {
           letter-spacing: 1px;
+          font-size: 1.9rem;
         }
       }
     }
@@ -778,6 +784,7 @@ body {
   #carouselExampleIndicators, #carouselExampleIndicators-2{
     .carousel-indicators {
       bottom: -75px;
+      z-index: 4;
       li {
         width: 16px;
         height: 16px;
